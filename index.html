@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Sun School</title>
+
+    <!-- Fonts: PLayfair Display for title, etc., and Red Rose for paragraphs, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mochiy+Pop+One&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* I wanted to create a css file, however, the task asks for html files only.  */
+      body {
+        font-family: "Red Rose";
+        display: flex;
+        width: 1439px;
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+        margin: 0px;
+        background: #070707;
+        color: white;
+      }
+      header {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .background-img {
+        position: absolute;
+        z-index: -3;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+      .blur {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.65);
+      }
+      h1 {
+        font-family: "Josefin Sans";
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 190px;
+      }
+      .nav {
+        display: flex;
+        width: 50%;
+        justify-content: space-between;
+        padding-right: 190px;
+      }
+      .nav a {
+        font-family: "Josefin Sans";
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+      }
+      .h3-description {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        z-index: -1;
+      }
+      .h3-description h3 {
+        font-size: 50px;
+        font-family: "Josefin Sans";
+        font-weight: 700;
+        text-align: center;
+      }
+      main {
+        padding: 0 190px;
+      }
+      .chapter {
+        margin: 0;
+        padding: 20px;
+      }
+      .chapter h3 {
+        font-family: "Josefin Sans";
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .chapter-content {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+      }
+      .chapter-text-and-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 250px;
+        box-sizing: border-box;
+        align-items: stretch;
+      }
+      .chapter-text-and-img img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+      }
+      .chapter-text-and-img p {
+        margin: 0;
+        text-align: left;
+      }
+      footer {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        color: #070707;
+      }
+      footer p {
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        font-size: 20px;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header class="header">
+      <h1>
+        <!-- h1 with the title -->
+        黄金の太陽 <br />
+        GOLDEN SUN
+      </h1>
+      <nav class="nav">
+        <a href="#classes">Classes</a>
+        <a href="/shop.html">Our Shop</a>
+        <a href="#about-us">About us</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <img
+        class="background-img"
+        src="https://festivalkontoret.s3.eu-central-1.amazonaws.com/filmbilder_opx/2021/_articleFullWidth/Harakiri.jpg"
+        alt="background image"
+      />
+      <div class="blur"></div>
+      <div class="h3-description">
+        <h3>
+          JAPANESE <br />
+          SWORDSMANSHIP SCHOOL
+        </h3>
+      </div>
+      <div class="chapter">
+        <h3>About our school</h3>
+        <div class="chapter-content">
+          <div class="chapter-text-and-img">
+            <p>
+              Our dojo is a space where students immerse themselves in the art
+              of fencing. It is equipped with all the necessary facilities to
+              provide a safe and focused environment for mastering techniques.
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2024/03/15/20/07/martial-arts-8635714_1280.jpg"
+              alt="Our Dojo"
+            />
+          </div>
+          <div class="chapter-text-and-img">
+            <img
+              src="https://hokushin.com.au/site/wp-content/uploads/2015/05/welcome-pic-02.jpg"
+              alt="Our Coach"
+            />
+            <p>
+              Our coaches are experienced professionals with years of
+              competitive and teaching experience. They provide personalized
+              training, focusing on technique, strategy, and discipline, helping
+              students reach their full potential.
+            </p>
+          </div>
+          <div class="chapter-text-and-img">
+            <p>
+              The dojo is a dedicated training space where students immerse
+              themselves in the art of fencing. It is equipped with all the
+              necessary facilities to provide a safe and focused environment for
+              mastering techniques.
+            </p>
+            <img
+              src="https://cdn.pixabay.com/photo/2024/03/15/20/07/martial-arts-8635714_1280.jpg"
+              alt="Our Dojo"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer><p>by Abdigaliyev Zhasulan from SE-2304.</p></footer>
+  </body>
+</html>
