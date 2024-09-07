@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Sun School</title>
 
     <!-- Fonts: Playfair Display for title, Red Rose for paragraphs -->
@@ -12,9 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mochiy+Pop+One&family=Red+Rose:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
-        body {
+      body {
         font-family: "Red Rose";
         display: flex;
         padding-top: 30px;
@@ -24,7 +27,7 @@
         background: #070707;
         color: white;
       }
-        header {
+      header {
         position: absolute;
         z-index: 2;
         top: 0;
@@ -46,7 +49,7 @@
         width: 53%;
         padding-right: 190px;
       }
-      .nav ul{
+      .nav ul {
         list-style-type: none;
         display: flex;
         width: 100%;
@@ -65,81 +68,83 @@
         cursor: pointer;
         display: inline-block;
         position: relative;
-        color: #ffffff; 
+        color: #ffffff;
       }
-      
+
       .nav-link:after {
-        content: '';
-        position: absolute; 
-        width: 100%; 
+        content: "";
+        position: absolute;
+        width: 100%;
         transform: scaleX(0);
-        height: 2px; 
-        bottom: 0; 
-        left: 0; 
-        background-color: #ffffff; 
-        transform-origin: bottom right; 
-        transition: transform 0.25s ease-out; 
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
       }
-      
+
       .nav-link:hover:after {
-        transform: scaleX(1); 
-        transform-origin: bottom left; 
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
-      .nav span{
+      .nav span {
         margin-right: 5px;
-        }
-      .fa-chevron-down, .fa-chevron-right{
+      }
+      .fa-chevron-down,
+      .fa-chevron-right {
         font-size: 12px;
-        transition: .3s;
+        transition: 0.3s;
+      }
+      .dropdown:hover .fa-chevron-down,
+      .sub-dropdown:hover .fa-chevron-right {
+        transform: rotate(180deg);
+      }
+      /* ===== Dropdown ===== */
+      .dropdown {
+        position: relative;
+      }
+      .nav .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      .dropdown-content li {
+        padding: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* ===== Sub - Dropdown ===== */
+      .nav .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 10%;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      @keyframes slideUp {
+        from {
+          margin-top: 20px;
         }
-        .dropdown:hover .fa-chevron-down, .sub-dropdown:hover .fa-chevron-right{
-            transform: rotate(180deg);
+        to {
+          margin-top: 0;
         }
-        /* ===== Dropdown ===== */
-        .dropdown{
-            position: relative;
-        }
-        .nav .dropdown-content{
-            display: none;
-            position: absolute;
-            left: 0;
-            background: #070707;
-            min-width: 240px;
-            animation: slideUp .3s;
-        }
-        .dropdown-content li{
-            padding: 10px;
-        }
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-        /* ===== Sub - Dropdown ===== */
-        .nav .sub-dropdown-content{
-           display: none;
-           position: absolute;
-           left: 100%;
-           top: 10%;
-           background: #070707;
-           min-width: 240px;
-           animation: slideUp .3s;
-        }
-        @keyframes slideUp {
-            from{
-                margin-top: 20px;
-            }
-            to{
-                margin-top: 0;
-            }
-        }
-        .dropdown-link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sub-dropdown:hover .sub-dropdown-content{
-            display: block;
-        }
-      
+      }
+      .dropdown-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sub-dropdown:hover .sub-dropdown-content {
+        display: block;
+      }
+
       main {
         padding: 0 190px;
       }
@@ -163,28 +168,28 @@
         flex-direction: column;
         align-items: center;
       }
-      
+
       .main-header > h1 {
         font-family: "Josefin Sans";
         font-size: 56px;
         font-weight: 700;
         text-align: center;
       }
-      
+
       .main-header > details {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
+
       .main-header > details > p {
         text-align: center;
         max-width: 1000px;
       }
 
       /* Product Grid CSS */
-    .product-grid {
+      .product-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -192,11 +197,11 @@
         margin-top: 100px;
       }
 
-    .product-card:hover {
-          transform: scale(1.05);
+      .product-card:hover {
+        transform: scale(1.05);
       }
 
-    .product-card {
+      .product-card {
         background-color: #1e1c1c;
         overflow: hidden;
         width: 300px;
@@ -204,23 +209,23 @@
         text-align: center;
         color: white;
         transition: transform 0.2s;
-        }
+      }
 
-    .product-image {
+      .product-image {
         position: relative;
         width: 100%;
         height: 300px;
         overflow: hidden;
-    }
-    
-    .product-image img {
+      }
+
+      .product-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: opacity 0.3s ease, height 0.3s ease;
-    }
-    
-    .default-image {
+      }
+
+      .default-image {
         position: absolute;
         top: 0;
         left: 0;
@@ -228,152 +233,200 @@
         height: 100%;
         object-fit: cover;
         z-index: 1;
-    }
-    
-    .hover-image {
+      }
+
+      .hover-image {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; 
+        height: 100%;
         object-fit: cover;
         z-index: 2;
-        opacity: 0; 
-        transition: height 0.3s ease, opacity 0.3s ease; 
-    }
-    
-    .product-image:hover .hover-image {
-        height: 300px; 
-        cursor: pointer;
-        opacity: 1; 
-    }
-    
-    .product-image:hover .default-image {
-        opacity: 0; 
-        cursor: pointer;
-    }
-          
+        opacity: 0;
+        transition: height 0.3s ease, opacity 0.3s ease;
+      }
 
-    .product-name {
+      .product-image:hover .hover-image {
+        height: 300px;
+        cursor: pointer;
+        opacity: 1;
+      }
+
+      .product-image:hover .default-image {
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .product-name {
         font-family: "Josefin Sans";
         font-weight: 500;
         font-size: 20px;
         margin: 25px 0 10px 20px;
         text-align: left;
-        }
+      }
 
-    .product-price {
+      .product-price {
         font-family: "Josefin Sans";
         font-size: 16px;
         margin-left: 20px;
         color: rgb(193, 189, 189);
         text-align: left;
-    }
-
+      }
     </style>
-</head>
-<body>
-     <!-- Header and Navigation -->
-     <header class="header">
-        <h1>
-          <!-- h1 with the title -->
-          黄金の太陽 <br />
-          GOLDEN SUN
-        </h1>
-        <nav class="nav">
-            <ul>
-                <li><a class="nav-link" href="index.html">Home</a></li>
-                <li><a class="nav-link" href="#classes">Classes</a></li>
-                <li class="dropdown">
-                    <a class="nav-link"><span>Our Shop</span><i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li class="sub-dropdown">
-                        <a class="nav-link"><span>Japanese Swords</span> <i class="fa fa-chevron-right"></i></a>
-                        <ul class="sub-dropdown-content">
-                            <li><a href="katana.html" class="nav-link">Katana</a></li>
-                            <li><a href="wakizashi.html" class="nav-link">Wakizashi</a></li>
-                        </ul>
-                        <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
-                    </ul>
-                <li><a class="nav-link" href="#about-us">About us</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header class="header">
+      <h1>
+        <!-- h1 with the title -->
+        黄金の太陽 <br />
+        GOLDEN SUN
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#classes">Classes</a></li>
+          <li class="dropdown">
+            <a class="nav-link"
+              ><span>Our Shop</span><i class="fa fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li class="sub-dropdown">
+                <a class="nav-link"
+                  ><span>Japanese Swords</span>
+                  <i class="fa fa-chevron-right"></i
+                ></a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="katana.html" class="nav-link">Katana</a></li>
+                  <li>
+                    <a href="wakizashi.html" class="nav-link">Wakizashi</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
             </ul>
-            </nav>
-      </header>
+          </li>
+
+          <li><a class="nav-link" href="#about-us">About us</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Main Content -->
     <main>
-        <div class="main-header">
-            <h1>WAKIZASHI</h1>
-            <details>
-                <summary>More info</summary>
-                <h2>
-                    <span>Authentic Wakizashi Japanese swords</span>
-                </h2>
-                <p>Immerse yourself in the historical splendor of the Wakizashi Sword Collection, 
-                    a curated selection of this revered Japanese short sword. A significant part of Japan's
-                     rich samurai tradition, the wakizashi is an exquisite embodiment of craftsmanship, functionality,
-                      and cultural symbolism.</p>
-                <p>Our <strong>Wakizashi Sword</strong> Collection honors the exceptional creativity and expertise required 
-                    to make these age-old swords. Each wakizashi in our collection is a representation of the 
-                    sophisticated methods and precise attention to detail that characterize Japanese sword-making's
-                     exquisite workmanship.</p>
-                <h2>
-                    <span>What is a Wakizashi</span>
-                </h2>
-                <p>The blade length of the wakizashi (脇差), a traditional Japanese short sword, normally 
-                    ranges from 30 to 60 cm. It was frequently worn alongside the katana to create the "<strong>daisho</strong>,"
-                    a pair known as the "<strong>side arm</strong>" of the <strong>samurai</strong>. The wakizashi, which was more than simply a 
-                    weapon but also a representation of a samurai's dignity and social standing, was crucial to 
-                    the seppuku rite of suicide.</p>
-            </details>
+      <div class="main-header">
+        <h1>WAKIZASHI</h1>
+        <details>
+          <summary>More info</summary>
+          <h2>
+            <span>Authentic Wakizashi Japanese swords</span>
+          </h2>
+          <p>
+            Immerse yourself in the historical splendor of the Wakizashi Sword
+            Collection, a curated selection of this revered Japanese short
+            sword. A significant part of Japan's rich samurai tradition, the
+            wakizashi is an exquisite embodiment of craftsmanship,
+            functionality, and cultural symbolism.
+          </p>
+          <p>
+            Our <strong>Wakizashi Sword</strong> Collection honors the
+            exceptional creativity and expertise required to make these age-old
+            swords. Each wakizashi in our collection is a representation of the
+            sophisticated methods and precise attention to detail that
+            characterize Japanese sword-making's exquisite workmanship.
+          </p>
+          <h2>
+            <span>What is a Wakizashi</span>
+          </h2>
+          <p>
+            The blade length of the wakizashi (脇差), a traditional Japanese
+            short sword, normally ranges from 30 to 60 cm. It was frequently
+            worn alongside the katana to create the "<strong>daisho</strong>," a
+            pair known as the "<strong>side arm</strong>" of the
+            <strong>samurai</strong>. The wakizashi, which was more than simply
+            a weapon but also a representation of a samurai's dignity and social
+            standing, was crucial to the seppuku rite of suicide.
+          </p>
+        </details>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/White wakizashi.png"
+              alt="White wakizashi"
+              class="defaul-image"
+            />
+            <img
+              src="images/White wakizashi hover.png"
+              alt="White wakizashi"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">White Wakizashi</div>
+          <div class="product-price">$289.00</div>
         </div>
-        
-        <!-- Product Grid -->
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/White wakizashi.png" alt="White wakizashi" class="defaul-image">
-                    <img src="images/White wakizashi hover.png" alt="White wakizashi" class="hover-image">
-                </div>
-                <div class="product-name">White Wakizashi</div>
-                <div class="product-price">$289.00</div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Wolf wakizashi.png" alt="Wolf wakizashi" class="default-image">
-                    <img src="images/Wolf wakizashi hover.png" alt="Wolf wakizashi" class="hover-image">
 
-                </div>
-                <div class="product-name">Wolf Wakizashi</div>
-                <div class="product-price">$399.00</div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Black wakizashi.png" alt="Black wakizashi" class="default-image">
-                    <img src="images/Black wakizashi hover.png" alt="Black wakizashi" class="hover-image">
-
-                </div>
-                <div class="product-name">Black Wakizashi</div>
-                <div class="product-price">$389.00</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Tactical wakizashi.png" alt="Tactical wakizashi" class="default-image">
-                    <img src="images/Tactical wakizashi hover.png" alt="Tactical wakizashi" class="hover-image">
-
-                </div>
-                <div class="product-name">Tactical Wakizashi</div>
-                <div class="product-price">$320.00</div>
-            </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Wolf wakizashi.png"
+              alt="Wolf wakizashi"
+              class="default-image"
+            />
+            <img
+              src="images/Wolf wakizashi hover.png"
+              alt="Wolf wakizashi"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Wolf Wakizashi</div>
+          <div class="product-price">$399.00</div>
         </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Black wakizashi.png"
+              alt="Black wakizashi"
+              class="default-image"
+            />
+            <img
+              src="images/Black wakizashi hover.png"
+              alt="Black wakizashi"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Black Wakizashi</div>
+          <div class="product-price">$389.00</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Tactical wakizashi.png"
+              alt="Tactical wakizashi"
+              class="default-image"
+            />
+            <img
+              src="images/Tactical wakizashi hover.png"
+              alt="Tactical wakizashi"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Tactical Wakizashi</div>
+          <div class="product-price">$320.00</div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I. </p>
+      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
     </footer>
-</body>
+  </body>
 </html>

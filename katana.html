@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Sun School</title>
 
     <!-- Fonts: Playfair Display for title, Red Rose for paragraphs -->
@@ -12,9 +12,12 @@
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mochiy+Pop+One&family=Red+Rose:wght@300..700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <style>
-        body {
+      body {
         font-family: "Red Rose";
         display: flex;
         padding-top: 30px;
@@ -24,7 +27,7 @@
         background: #070707;
         color: white;
       }
-        header {
+      header {
         position: absolute;
         z-index: 2;
         top: 0;
@@ -46,7 +49,7 @@
         width: 53%;
         padding-right: 190px;
       }
-      .nav ul{
+      .nav ul {
         list-style-type: none;
         display: flex;
         width: 100%;
@@ -65,80 +68,82 @@
         cursor: pointer;
         display: inline-block;
         position: relative;
-        color: #ffffff; 
+        color: #ffffff;
       }
-      
+
       .nav-link:after {
-        content: '';
-        position: absolute; 
-        width: 100%; 
+        content: "";
+        position: absolute;
+        width: 100%;
         transform: scaleX(0);
-        height: 2px; 
-        bottom: 0; 
-        left: 0; 
-        background-color: #ffffff; 
-        transform-origin: bottom right; 
-        transition: transform 0.25s ease-out; 
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
       }
-      
+
       .nav-link:hover:after {
-        transform: scaleX(1); 
-        transform-origin: bottom left; 
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
-      .nav span{
+      .nav span {
         margin-right: 5px;
-        }
-      .fa-chevron-down, .fa-chevron-right{
+      }
+      .fa-chevron-down,
+      .fa-chevron-right {
         font-size: 12px;
-        transition: .3s;
+        transition: 0.3s;
+      }
+      .dropdown:hover .fa-chevron-down,
+      .sub-dropdown:hover .fa-chevron-right {
+        transform: rotate(180deg);
+      }
+      /* ===== Dropdown ===== */
+      .dropdown {
+        position: relative;
+      }
+      .nav .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      .dropdown-content li {
+        padding: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* ===== Sub - Dropdown ===== */
+      .nav .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 10%;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      @keyframes slideUp {
+        from {
+          margin-top: 20px;
         }
-        .dropdown:hover .fa-chevron-down, .sub-dropdown:hover .fa-chevron-right{
-            transform: rotate(180deg);
+        to {
+          margin-top: 0;
         }
-        /* ===== Dropdown ===== */
-        .dropdown{
-            position: relative;
-        }
-        .nav .dropdown-content{
-            display: none;
-            position: absolute;
-            left: 0;
-            background: #070707;
-            min-width: 240px;
-            animation: slideUp .3s;
-        }
-        .dropdown-content li{
-            padding: 10px;
-        }
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-        /* ===== Sub - Dropdown ===== */
-        .nav .sub-dropdown-content{
-           display: none;
-           position: absolute;
-           left: 100%;
-           top: 10%;
-           background: #070707;
-           min-width: 240px;
-           animation: slideUp .3s;
-        }
-        @keyframes slideUp {
-            from{
-                margin-top: 20px;
-            }
-            to{
-                margin-top: 0;
-            }
-        }
-        .dropdown-link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sub-dropdown:hover .sub-dropdown-content{
-            display: block;
-        }
+      }
+      .dropdown-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sub-dropdown:hover .sub-dropdown-content {
+        display: block;
+      }
       main {
         padding: 0 190px;
       }
@@ -162,28 +167,28 @@
         flex-direction: column;
         align-items: center;
       }
-      
+
       .main-header > h1 {
         font-family: "Josefin Sans";
         font-size: 56px;
         font-weight: 700;
         text-align: center;
       }
-      
+
       .main-header > details {
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
-      
+
       .main-header > details > p {
         text-align: center;
         max-width: 1000px;
       }
 
       /* Product Grid CSS */
-    .product-grid {
+      .product-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -191,11 +196,11 @@
         margin-top: 100px;
       }
 
-    .product-card:hover {
-          transform: scale(1.05);
+      .product-card:hover {
+        transform: scale(1.05);
       }
 
-    .product-card {
+      .product-card {
         background-color: #1e1c1c;
         overflow: hidden;
         width: 300px;
@@ -203,23 +208,23 @@
         text-align: center;
         color: white;
         transition: transform 0.2s;
-        }
+      }
 
-    .product-image {
+      .product-image {
         position: relative;
         width: 100%;
         height: 300px;
         overflow: hidden;
-    }
-    
-    .product-image img {
+      }
+
+      .product-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: opacity 0.3s ease, height 0.3s ease;
-    }
-    
-    .default-image {
+      }
+
+      .default-image {
         position: absolute;
         top: 0;
         left: 0;
@@ -227,152 +232,204 @@
         height: 100%;
         object-fit: cover;
         z-index: 1;
-    }
-    
-    .hover-image {
+      }
+
+      .hover-image {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%; 
+        height: 100%;
         object-fit: cover;
         z-index: 2;
-        opacity: 0; 
-        transition: height 0.3s ease, opacity 0.3s ease; 
-    }
-    
-    .product-image:hover .hover-image {
-        height: 300px; 
-        cursor: pointer;
-        opacity: 1; 
-    }
-    
-    .product-image:hover .default-image {
-        opacity: 0; 
-        cursor: pointer;
-    }
-          
+        opacity: 0;
+        transition: height 0.3s ease, opacity 0.3s ease;
+      }
 
-    .product-name {
+      .product-image:hover .hover-image {
+        height: 300px;
+        cursor: pointer;
+        opacity: 1;
+      }
+
+      .product-image:hover .default-image {
+        opacity: 0;
+        cursor: pointer;
+      }
+
+      .product-name {
         font-family: "Josefin Sans";
         font-weight: 500;
         font-size: 20px;
         margin: 25px 0 10px 20px;
         text-align: left;
-        }
+      }
 
-    .product-price {
+      .product-price {
         font-family: "Josefin Sans";
         font-size: 16px;
         margin-left: 20px;
         color: rgb(193, 189, 189);
         text-align: left;
-    }
-
+      }
     </style>
-</head>
-<body>
-     <!-- Header and Navigation -->
-     <header class="header">
-        <h1>
-          <!-- h1 with the title -->
-          黄金の太陽 <br />
-          GOLDEN SUN
-        </h1>
-        <nav class="nav">
-            <ul>
-                <li><a class="nav-link" href="index.html">Home</a></li>
-                <li class="dropdown">
-                    <a class="nav-link"><span>Classes</span></a>
-                    <ul class="dropdown-content">
-                        <li><a href="kendo.html" class="nav-link">Kendo</a></li>
-                    </ul>
-                <li class="dropdown">
-                    <a class="nav-link"><span>Our Shop</span><i class="fa fa-chevron-down"></i></a>
-                    <ul class="dropdown-content">
-                        <li class="sub-dropdown">
-                        <a class="nav-link"><span>Japanese Swords</span> <i class="fa fa-chevron-right"></i></a>
-                        <ul class="sub-dropdown-content">
-                            <li><a href="katana.html" class="nav-link">Katana</a></li>
-                            <li><a href="wakizashi.html" class="nav-link">Wakizashi</a></li>
-                        </ul>
-                        <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
-                    </ul>
-                <li><a class="nav-link" href="#about-us">About us</a></li>
-                <li><a class="nav-link" href="#contact">Contact</a></li>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header class="header">
+      <h1>
+        <!-- h1 with the title -->
+        黄金の太陽 <br />
+        GOLDEN SUN
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="nav-link"><span>Classes</span></a>
+            <ul class="dropdown-content">
+              <li><a href="kendo.html" class="nav-link">Kendo</a></li>
             </ul>
-            </nav>
-      </header>
+          </li>
+
+          <li class="dropdown">
+            <a class="nav-link"
+              ><span>Our Shop</span><i class="fa fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li class="sub-dropdown">
+                <a class="nav-link"
+                  ><span>Japanese Swords</span>
+                  <i class="fa fa-chevron-right"></i
+                ></a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="katana.html" class="nav-link">Katana</a></li>
+                  <li>
+                    <a href="wakizashi.html" class="nav-link">Wakizashi</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
+            </ul>
+          </li>
+
+          <li><a class="nav-link" href="#about-us">About us</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- Main Content -->
     <main>
-        <div class="main-header">
-            <h1>SAMURAI SWORD</h1>
-            <details>
-                <summary>More info</summary>
-                <p>Step into the elegant world of the <strong>Japanese samurai </strong>
-                    with our exquisite collection of Katana swords. Each piece is a testament to the
-                     intricate art of sword making, a skill passed down through generations of master craftsmen.</p>
-                <h2>
-                    <span>Authentic Samurai Swords</span>
-                </h2>
-                <p>A Japanese sword with a <strong>curved blade</strong> is called a katana. 
-                    The kanji utilized to type in "katana" includes a variety of conceivable meanings. 
-                    The most widely used character is 刀, sometimes known as "sword," "blade," or "sabre." 
-                    The two other prevalent writings are 斬刀 and 大刀.</p>
-                <p>Our collection boasts a wide variety of authentic Samurai swords or <strong>Nihonto</strong>, 
-                    offering an intimate glimpse into the Samurai ethos. Each katana, wakizashi, 
-                    and tanto in our collection is a testament to the skillful art of Japanese swordsmithing. 
-                    Crafted from traditional Tamahagane steel, T10, or high carbon through a rigorous process of sword 
-                    forging, these swords embody the spirit of <strong>Bushido</strong> and the <strong>warrior's life.</strong></p>
-            </details>
+      <div class="main-header">
+        <h1>SAMURAI SWORD</h1>
+        <details>
+          <summary>More info</summary>
+          <p>
+            Step into the elegant world of the
+            <strong>Japanese samurai </strong> with our exquisite collection of
+            Katana swords. Each piece is a testament to the intricate art of
+            sword making, a skill passed down through generations of master
+            craftsmen.
+          </p>
+          <h2>
+            <span>Authentic Samurai Swords</span>
+          </h2>
+          <p>
+            A Japanese sword with a <strong>curved blade</strong> is called a
+            katana. The kanji utilized to type in "katana" includes a variety of
+            conceivable meanings. The most widely used character is 刀,
+            sometimes known as "sword," "blade," or "sabre." The two other
+            prevalent writings are 斬刀 and 大刀.
+          </p>
+          <p>
+            Our collection boasts a wide variety of authentic Samurai swords or
+            <strong>Nihonto</strong>, offering an intimate glimpse into the
+            Samurai ethos. Each katana, wakizashi, and tanto in our collection
+            is a testament to the skillful art of Japanese swordsmithing.
+            Crafted from traditional Tamahagane steel, T10, or high carbon
+            through a rigorous process of sword forging, these swords embody the
+            spirit of <strong>Bushido</strong> and the
+            <strong>warrior's life.</strong>
+          </p>
+        </details>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Red and white.png"
+              alt="Red and white"
+              class="defaul-image"
+            />
+            <img
+              src="images/Red and white hover.png"
+              alt="Red and white"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Red and White Katana</div>
+          <div class="product-price">$249.00</div>
         </div>
-        
-        <!-- Product Grid -->
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Red and white.png" alt="Red and white" class="defaul-image">
-                    <img src="images/Red and white hover.png" alt="Red and white" class="hover-image">
-                </div>
-                <div class="product-name">Red and White Katana</div>
-                <div class="product-price">$249.00</div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Blood groove katana.png" alt="Blood groove katana" class="default-image">
-                    <img src="images/Blood groove hoverv2.png" alt="Blood groove katana" class="hover-image">
 
-                </div>
-                <div class="product-name">Blood groove Katana</div>
-                <div class="product-price">$359.00</div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Flame.png" alt="Flame katana" class="default-image">
-                    <img src="images/Flame hover.png" alt="Flame katana" class="hover-image">
-
-                </div>
-                <div class="product-name">Flame Katana</div>
-                <div class="product-price">$299.00</div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/Katana Rayskin.png" alt="Katana Rayskin" class="default-image">
-                    <img src="images/Katana Rayskin hover.png" alt="Katana Rayskin" class="hover-image">
-
-                </div>
-                <div class="product-name">Katana Rayskin</div>
-                <div class="product-price">$1,499.00</div>
-            </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Blood groove katana.png"
+              alt="Blood groove katana"
+              class="default-image"
+            />
+            <img
+              src="images/Blood groove hoverv2.png"
+              alt="Blood groove katana"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Blood groove Katana</div>
+          <div class="product-price">$359.00</div>
         </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Flame.png"
+              alt="Flame katana"
+              class="default-image"
+            />
+            <img
+              src="images/Flame hover.png"
+              alt="Flame katana"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Flame Katana</div>
+          <div class="product-price">$299.00</div>
+        </div>
+
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="images/Katana Rayskin.png"
+              alt="Katana Rayskin"
+              class="default-image"
+            />
+            <img
+              src="images/Katana Rayskin hover.png"
+              alt="Katana Rayskin"
+              class="hover-image"
+            />
+          </div>
+          <div class="product-name">Katana Rayskin</div>
+          <div class="product-price">$1,499.00</div>
+        </div>
+      </div>
     </main>
 
     <footer>
-        <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I. </p>
+      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
     </footer>
-</body>
+  </body>
 </html>
