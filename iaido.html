@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Sun School</title>
+
+    <!-- Fonts: Josefin Sans for title, etc., and Red Rose for paragraphs, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      header {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header > h1 {
+        font-family: "Josefin Sans";
+        font-size: 24px;
+        font-weight: 700;
+        padding-left: 190px;
+        text-align: left;
+      }
+      .nav {
+        display: flex;
+        width: 53%;
+        padding-right: 190px;
+      }
+      .nav ul {
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+      }
+      .nav a {
+        font-family: "Josefin Sans";
+        font-size: 20px;
+        font-weight: 400;
+        text-decoration: none;
+        color: white;
+        font-weight: 400;
+      }
+      .nav-link {
+        padding: 16px 6px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        color: #ffffff;
+      }
+
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+      }
+
+      .nav-link:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+      }
+      .nav span {
+        margin-right: 5px;
+      }
+      .fa-chevron-down,
+      .fa-chevron-right {
+        font-size: 12px;
+        transition: 0.3s;
+      }
+      .dropdown:hover .fa-chevron-down,
+      .sub-dropdown:hover .fa-chevron-right {
+        transform: rotate(180deg);
+      }
+      /* ===== Dropdown ===== */
+      .dropdown {
+        position: relative;
+      }
+      .nav .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      .dropdown-content li {
+        padding: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* ===== Sub - Dropdown ===== */
+      .nav .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 10%;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      @keyframes slideUp {
+        from {
+          margin-top: 20px;
+        }
+        to {
+          margin-top: 0;
+        }
+      }
+      .dropdown-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sub-dropdown:hover .sub-dropdown-content {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header and Navigation by Kenbay I.-->
+    <header class="header">
+      <h1>
+        <!-- h1 with the title -->
+        黄金の太陽 <br />
+        GOLDEN SUN
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="nav-link"
+              ><span>Classes</span><i class="fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li><a href="kendo.html" class="nav-link">Kendo</a></li>
+              <li><a href="iaido.html" class="nav-link">Iaido</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link"
+              ><span>Our Shop</span><i class="fa fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li class="sub-dropdown">
+                <a class="nav-link"
+                  ><span>Japanese Swords</span>
+                  <i class="fa fa-chevron-right"></i
+                ></a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="katana.html" class="nav-link">Katana</a></li>
+                  <li>
+                    <a href="wakizashi.html" class="nav-link">Wakizashi</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="nav-link" href="shop_books.html">Book Shop</a>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link" href="#about-us">About us</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="section-top"></section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

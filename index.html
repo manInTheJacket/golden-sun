@@ -142,15 +142,6 @@
       .sub-dropdown:hover .sub-dropdown-content {
         display: block;
       }
-      .background-img {
-        position: absolute;
-        z-index: -3;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-      }
       .section-top {
         width: 100%;
         height: 100vh;
@@ -162,20 +153,6 @@
         font-size: 24px;
         font-weight: 700;
         padding-left: 190px;
-      }
-      .nav {
-        display: flex;
-        width: 50%;
-        justify-content: space-between;
-        padding-right: 190px;
-      }
-      .nav a {
-        font-family: "Josefin Sans";
-        font-size: 20px;
-        font-weight: 400;
-        text-decoration: none;
-        color: white;
-        font-weight: 400;
       }
       .h3-description {
         width: 100%;
@@ -192,14 +169,23 @@
         text-align: center;
       }
       .chapter {
-        margin: 50px 0;
+        margin: 100px 0;
         padding: 0 190px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .chapter-h3-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
       .chapter h3 {
         font-family: "Josefin Sans";
         font-size: 30px;
         font-weight: 400;
         text-align: center;
+        margin: 30px 0;
       }
       .chapter-content {
         display: flex;
@@ -224,14 +210,20 @@
         margin: 0;
         text-align: left;
       }
-      .middle {
+      .section-middle {
+        margin: 100px 0;
         display: flex;
         flex-direction: column;
         padding: 0 190px;
         align-items: center;
+        justify-content: center;
       }
-      .middle-img {
-        margin-top: 50px;
+      .section-middle-text-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .section-middle-img {
         width: 80%;
       }
       .quote {
@@ -251,6 +243,24 @@
         font-size: 20px;
         margin: 0;
       }
+      .explore-link {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .button {
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+        padding: 5px 0;
+      }
+      .button:hover {
+        background-color: white;
+        color: #070707;
+      }
     </style>
   </head>
   <body>
@@ -265,10 +275,12 @@
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li class="dropdown">
-            <a class="nav-link"><span>Classes</span></a>
+            <a class="nav-link"
+              ><span>Classes</span><i class="fa fa-chevron-down"></i
+            ></a>
             <ul class="dropdown-content">
               <li><a href="kendo.html" class="nav-link">Kendo</a></li>
-              <li><a href="iaido.html">Iaido</a></li>
+              <li><a href="iaido.html" class="nav-link">Iaido</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -306,71 +318,97 @@
           </h3>
         </div>
       </section>
-      <section class="middle">
-        <img
-          class="middle-img"
-          src="images/Samurai-Rebellion.png"
-          alt="Samurai with a katana"
-        />
-        <div class="quote">
-          <blockquote
-            cite="https://www.inspiringquotes.us/quotes/8HVi_CVP1TyHQ"
-          >
-            <p>
-              "If a man does not investigate into the matter of bushido daily,
-              it will be difficult for him to die a brave and manly death."
-            </p>
-          </blockquote>
-          <p>
-            — Kato Kiyomasa,
-            <cite
-              >a Japanese daimyo of the Azuchi-Momoyama and Edo periods</cite
+      <section class="section-middle">
+        <div class="section-middle-text-img">
+          <img
+            class="section-middle-img"
+            src="images/Samurai-Rebellion.png"
+            alt="Samurai with a katana"
+          />
+          <div class="quote">
+            <blockquote
+              cite="https://www.inspiringquotes.us/quotes/8HVi_CVP1TyHQ"
             >
-          </p>
+              <p>
+                "If a man does not investigate into the matter of bushido daily,
+                it will be difficult for him to die a brave and manly death."
+              </p>
+            </blockquote>
+            <p>
+              — Kato Kiyomasa,
+              <cite
+                >a Japanese daimyo of the Azuchi-Momoyama and Edo periods</cite
+              >
+            </p>
+          </div>
         </div>
       </section>
       <section class="chapter">
-        <h3>About our school</h3>
-        <div class="chapter-content">
-          <div class="chapter-text-and-img">
-            <p>
-              Our dojo is a space where students immerse themselves in the art
-              of fencing. It is equipped with all the necessary facilities to
-              provide a safe and focused environment for mastering techniques.
-            </p>
-            <img
-              src="https://cdn.pixabay.com/photo/2024/03/15/20/07/martial-arts-8635714_1280.jpg"
-              alt="Our Dojo"
-            />
+        <div class="chapter-h3-content">
+          <h3>Our classes</h3>
+          <div class="chapter-content">
+            <div class="chapter-text-and-img">
+              <img src="images/main-kendo.png" alt="Kendo" />
+              <h3>Kendo<br />剣道</h3>
+              <p>
+                Modern Japanese martial art of fencing with two-handed bamboo
+                swords, originally developed as a safe form of sword training
+                for samurai.
+              </p>
+              <a href="kendo.html" class="explore-link"
+                ><button class="button">Explore</button></a
+              >
+            </div>
+            <div class="chapter-text-and-img">
+              <img src="images/main-iaido.png" alt="Iaido" />
+              <h3>Iaido<br />居合道</h3>
+              <p>
+                is a Japanese martial art that emphasizes being aware and
+                capable of quickly drawing the sword and responding to sudden
+                attacks.
+              </p>
+              <a href="iaido.html" class="explore-link"
+                ><button class="button">Explore</button></a
+              >
+            </div>
           </div>
-          <div class="chapter-text-and-img">
-            <img
-              src="https://hokushin.com.au/site/wp-content/uploads/2015/05/welcome-pic-02.jpg"
-              alt="Our Coach"
-            />
-            <p>
-              Our coaches are experienced professionals with years of
-              competitive and teaching experience. They provide personalized
-              training, focusing on technique, strategy, and discipline, helping
-              students reach their full potential.
-            </p>
-          </div>
-          <div class="chapter-text-and-img">
-            <p>
-              The dojo is a dedicated training space where students immerse
-              themselves in the art of fencing. It is equipped with all the
-              necessary facilities to provide a safe and focused environment for
-              mastering techniques.
-            </p>
-            <img
-              src="https://cdn.pixabay.com/photo/2024/03/15/20/07/martial-arts-8635714_1280.jpg"
-              alt="Our Dojo"
-            />
+        </div>
+      </section>
+      <section class="chapter">
+        <div class="chapter-h3-content">
+          <h3>About our school</h3>
+          <div class="chapter-content">
+            <div class="chapter-text-and-img">
+              <p>
+                Our dojo is a space where students immerse themselves in the art
+                of fencing. It is equipped with all the necessary facilities to
+                provide a safe and focused environment for mastering techniques.
+              </p>
+              <img src="images/our-dojo.png" alt="Our Dojo" />
+            </div>
+            <div class="chapter-text-and-img">
+              <img src="images/our-coach.jpg" alt="Our Coach" />
+              <p>
+                Our coaches are experienced professionals with years of
+                competitive and teaching experience. They provide personalized
+                training, focusing on technique, strategy, and discipline,
+                helping students reach their full potential.
+              </p>
+            </div>
+            <div class="chapter-text-and-img">
+              <p>
+                We provide our own equipment for kendo training, ensuring safety
+                and quality for all students. Additionally, we have our own shop
+                offering a selection of books and swords, catering to those
+                looking to deepen their knowledge and skills in the art of
+                kendo.
+              </p>
+              <img src="images/main-katana.png" alt="Katana" />
+            </div>
           </div>
         </div>
       </section>
     </main>
-
     <!-- Footer -->
     <footer>
       <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
