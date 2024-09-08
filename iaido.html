@@ -17,6 +17,13 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
+      body {
+        font-family: "Red Rose";
+        margin: 0px;
+        padding: 0px;
+        background: #070707;
+        color: white;
+      }
       header {
         position: absolute;
         z-index: 2;
@@ -134,6 +141,67 @@
       .sub-dropdown:hover .sub-dropdown-content {
         display: block;
       }
+      .iaido-section-top {
+        width: 100%;
+        height: 100vh;
+        background-image: url("images/iaido.jpg");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .h3-description {
+        font-family: "Josefin Sans";
+        font-size: 50px;
+        font-weight: 700;
+        text-align: center;
+      }
+      .iaido-demonstration {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+      }
+      .iaido-demonstration img {
+        width: 50%;
+      }
+      .iaido-figcaption {
+        color: gray;
+        text-align: center;
+      }
+      .iaido-section-middle {
+        margin: 100px 0;
+        padding: 0 190px;
+      }
+      .iaido-section-middle h3 {
+        font-family: "Josefin Sans";
+        font-size: 30px;
+        font-weight: 400;
+        text-align: center;
+      }
+      .micro-chapter {
+        margin: 50px;
+      }
+      footer {
+        padding: 10px 0;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        color: #070707;
+      }
+      footer p {
+        font-family: "Josefin Sans";
+        font-weight: 400;
+        font-size: 20px;
+        margin: 0;
+      }
+      .stages-in-training {
+        margin: 0;
+        padding: 0;
+      }
+      .stages-in-training li {
+        margin-top: 10px;
+      }
     </style>
   </head>
   <body>
@@ -149,7 +217,7 @@
           <li><a class="nav-link" href="index.html">Home</a></li>
           <li class="dropdown">
             <a class="nav-link"
-              ><span>Classes</span><i class="fa-chevron-down"></i
+              ><span>Classes</span><i class="fa fa-chevron-down"></i
             ></a>
             <ul class="dropdown-content">
               <li><a href="kendo.html" class="nav-link">Kendo</a></li>
@@ -178,14 +246,137 @@
               </li>
             </ul>
           </li>
-          <li><a class="nav-link" href="#about-us">About us</a></li>
           <li><a class="nav-link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section class="section-top"></section>
+      <section class="iaido-section-top">
+        <div class="h3-description">Iaido (居合道)</div>
+      </section>
+      <section class="iaido-section-middle">
+        <div class="micro-chapter">
+          <h3>About Iaido</h3>
+          <p>
+            Iaido (居合道) is the art of drawing a Japanese sword from its
+            scabbard to obtain advantage over an opponent. The sword is drawn to
+            defend one's self, to exert control or perform the required actions
+            to save one's own life in the most efficient way.
+          </p>
+        </div>
+        <div class="micro-chapter">
+          <h3>History of Iaido</h3>
+          <p>
+            The origins of the martial arts lie hidden in Japan’s early history.
+            The first Japanese swords date back to the Yayoi period around 200
+            BC. They still had straight blades and were probably modelled on
+            Chinese weapons. The first typical Japanese swords with curved
+            blades were not made until the Hakuho period around 700 AD.
+          </p>
+          <p>
+            Techniques for the correct wielding of the sword already existed in
+            the Nara period (710-784).
+          </p>
+          <p>
+            In the Kamakura period (1185-1333), swords and the arts of swordplay
+            had their heyday due to the political situation in civil war-torn,
+            feudal Japan. Many different schools emerged that developed their
+            own systems of martial arts.
+          </p>
+          <p>
+            Among the oldest known styles of martial arts are Nen Ryu in 1368
+            and Katori Shinto Ryu in 1450. The sword fighting systems contained
+            therein, which primarily served to prepare warriors for the various
+            situations in the long-lasting warlike conflicts, formed the basis
+            on which various iaido styles could develop.
+          </p>
+          <p>
+            The basic aim of these iaido systems was, on the one hand, to avoid
+            tiring conflicts by attacking immediately and, on the other hand, to
+            be able to counter sudden attacks effectively.
+          </p>
+        </div>
+        <div>
+          <figure class="iaido-demonstration">
+            <img
+              src="images/iaido-demonstration.png"
+              alt="A man practises his katana on a bamboo tree."
+            />
+            <figcaption class="iaido-figcaption">
+              A man practises his katana on a bamboo tree.
+            </figcaption>
+          </figure>
+        </div>
+        <div class="micro-chapter">
+          <h3>Equipment</h3>
+          <p>
+            Originally, Iaido was trained with katanas – the extremely sharp
+            Japanese swords. In order to prevent possible injuries, today Iaido
+            is usually trained with Iaitos – blunt training swords made of a
+            special metal alloy that are modelled on katanas. These should be
+            adapted to the height and arm length of the trainee. Beginners‘
+            training begins with a bokuto or bokken – a wooden sword modelled on
+            the katana that is also used for partner exercises – to familiarise
+            the practitioner with the basic positions and movements. Very
+            advanced practitioners may also use sharp swords.
+          </p>
+        </div>
+        <div class="micro-chapter">
+          <h3>Stages in training</h3>
+          <ol class="stages-in-training">
+            <li>
+              Keiko. This means quite simply training or practice. This is the
+              stage during which the essential movements are perfected by slow
+              repetition, by breaking the kata down into its component parts, by
+              understanding how the techniques work in a fighting situation.
+              With this practice the swordsman begins to understand the
+              principles of Metsuke (correct use of the eyes), Seme (pressing or
+              pushing) in order to control the opponent, of Maai (combative
+              distance) and Ma (timing). This study takes about five years of
+              regular practice. Overlapping with it, from about the third or
+              fourth year, the swordsman will begin the practice of Tanren.
+            </li>
+            <li>
+              Tanren means to forge in the same way that a sword blade is
+              forged, with hard work, and sweat, and many hours of dedication,
+              folding together the hard and soft elements in the body, mind, and
+              movement just as the sword gains its strength out of hard and soft
+              steel. The student increasingly practises without concern for the
+              correctness of the movements (though they must remain correct and
+              effective) and repeats the kata uninterrupted with a feeling of
+              Shinken Shobu (a fight to the death with a real sword). During
+              this phase posture improved, movements become more natural,
+              techniques become more effective because timing is better
+              controlled and less predictable. As confidence increases and
+              Kigurai (bearing, demeanour) develops, training moves into the
+              phase called Renshu.
+            </li>
+            <li>
+              Renshu. Ren means to polish, to perfect by continued practice of
+              both keiko and tanren. It also means to polish the spirit and
+              character through the requirements of detail and interpretation.
+              To demonstrate a compassionate nature that can pass on knowledge
+              without egotistical pride and arrogance. This leads to the award
+              of Renshi meaning a person whose performance and character is
+              polished by training. This grade is not awarded below the rank of
+              6th Dan and is only available from the All Japan Kendo Federation
+              (ZNKR). After this stage the actions become slower and softer,
+              appearing to a bystander to be less effective-but the technique
+              comes from refined efficiency, not using force-until the moment
+              the sword is actually cutting, remaining relaxed in body but
+              constantly aware and prepared in mind. Only after leaving all of
+              these stages in the past and demonstrating the simplicity of the
+              correct action and knowing all of these stages by direct
+              experience can the student who has by now gained 7th Dan receive
+              Kyoshi (teacher grade) from the ZNKR.
+            </li>
+          </ol>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <!-- Footer -->
+    <footer>
+      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+    </footer>
   </body>
 </html>
