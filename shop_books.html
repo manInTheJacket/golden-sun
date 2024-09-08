@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Sun School</title>
 
-    <!-- Fonts: PLayfair Display for title, etc., and Red Rose for paragraphs, etc. -->
+    <!-- Fonts: Josefin Sans for title, etc., and Red Rose for paragraphs, etc. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mochiy+Pop+One&family=Red+Rose:wght@300..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Rose:wght@300..700&display=swap"
       rel="stylesheet"
     />
     <link
@@ -17,7 +17,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <style>
-        body {
+      body {
         font-family: "Red Rose";
         display: flex;
         padding-top: 30px;
@@ -28,7 +28,7 @@
         background: #070707;
         color: white;
       }
-        header {
+      header {
         position: absolute;
         z-index: 2;
         top: 0;
@@ -114,9 +114,9 @@
         position: relative; /* Set position relative */
         color: #ffffff; /* Set text color */
       }
-      
+
       .hover-underline-animation:after {
-        content: ''; /* Add content after the element */
+        content: ""; /* Add content after the element */
         position: absolute; /* Position absolute for pseudo-element */
         width: 100%; /* Full width */
         transform: scaleX(0); /* Initial scale of 0 for underline effect */
@@ -127,7 +127,7 @@
         transform-origin: bottom right; /* Set transform origin */
         transition: transform 0.25s ease-out; /* Transition effect for the underline */
       }
-      
+
       .hover-underline-animation:hover:after {
         transform: scaleX(1); /* Scale the underline on hover */
         transform-origin: bottom left; /* Set transform origin */
@@ -144,7 +144,7 @@
         width: 53%;
         padding-right: 190px;
       }
-      .nav ul{
+      .nav ul {
         list-style-type: none;
         display: flex;
         width: 100%;
@@ -163,187 +163,229 @@
         cursor: pointer;
         display: inline-block;
         position: relative;
-        color: #ffffff; 
+        color: #ffffff;
       }
-      
+
       .nav-link:after {
-        content: '';
-        position: absolute; 
-        width: 100%; 
+        content: "";
+        position: absolute;
+        width: 100%;
         transform: scaleX(0);
-        height: 2px; 
-        bottom: 0; 
-        left: 0; 
-        background-color: #ffffff; 
-        transform-origin: bottom right; 
-        transition: transform 0.25s ease-out; 
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #ffffff;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
       }
-      
+
       .nav-link:hover:after {
-        transform: scaleX(1); 
-        transform-origin: bottom left; 
+        transform: scaleX(1);
+        transform-origin: bottom left;
       }
-      .nav span{
+      .nav span {
         margin-right: 5px;
-        }
-      .fa-chevron-down, .fa-chevron-right{
+      }
+      .fa-chevron-down,
+      .fa-chevron-right {
         font-size: 12px;
-        transition: .3s;
+        transition: 0.3s;
+      }
+      .dropdown:hover .fa-chevron-down,
+      .sub-dropdown:hover .fa-chevron-right {
+        transform: rotate(180deg);
+      }
+      /* ===== Dropdown ===== */
+      .dropdown {
+        position: relative;
+      }
+      .nav .dropdown-content {
+        display: none;
+        position: absolute;
+        left: 0;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      .dropdown-content li {
+        padding: 10px;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      /* ===== Sub - Dropdown ===== */
+      .nav .sub-dropdown-content {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: 10%;
+        background: #070707;
+        min-width: 240px;
+        animation: slideUp 0.3s;
+      }
+      @keyframes slideUp {
+        from {
+          margin-top: 20px;
         }
-        .dropdown:hover .fa-chevron-down, .sub-dropdown:hover .fa-chevron-right{
-            transform: rotate(180deg);
+        to {
+          margin-top: 0;
         }
-        /* ===== Dropdown ===== */
-        .dropdown{
-            position: relative;
-        }
-        .nav .dropdown-content{
-            display: none;
-            position: absolute;
-            left: 0;
-            background: #070707;
-            min-width: 240px;
-            animation: slideUp .3s;
-        }
-        .dropdown-content li{
-            padding: 10px;
-        }
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-        /* ===== Sub - Dropdown ===== */
-        .nav .sub-dropdown-content{
-           display: none;
-           position: absolute;
-           left: 100%;
-           top: 10%;
-           background: #070707;
-           min-width: 240px;
-           animation: slideUp .3s;
-        }
-        @keyframes slideUp {
-            from{
-                margin-top: 20px;
-            }
-            to{
-                margin-top: 0;
-            }
-        }
-        .dropdown-link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sub-dropdown:hover .sub-dropdown-content{
-            display: block;
-        }
+      }
+      .dropdown-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sub-dropdown:hover .sub-dropdown-content {
+        display: block;
+      }
     </style>
-</head>
-<body>
-  <!-- Header and Navigation -->
-  <header class="header">
-    <h1>
-      <!-- h1 with the title -->
-      黄金の太陽 <br />
-      GOLDEN SUN
-    </h1>
-    <nav class="nav">
-      <ul>
-        <li><a class="nav-link" href="index.html">Home</a></li>
-        <li class="dropdown">
-          <a class="nav-link"><span>Classes</span></a>
-          <ul class="dropdown-content">
-            <li><a href="kendo.html" class="nav-link">Kendo</a></li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a class="nav-link"
-            ><span>Our Shop</span><i class="fa fa-chevron-down"></i
-          ></a>
-          <ul class="dropdown-content">
-            <li class="sub-dropdown">
-              <a class="nav-link"
-                ><span>Japanese Swords</span>
-                <i class="fa fa-chevron-right"></i
-              ></a>
-              <ul class="sub-dropdown-content">
-                <li><a href="katana.html" class="nav-link">Katana</a></li>
-                <li>
-                  <a href="wakizashi.html" class="nav-link">Wakizashi</a>
-                </li>
-              </ul>
-            </li>
+  </head>
+  <body>
+    <!-- Header and Navigation -->
+    <header class="header">
+      <h1>
+        <!-- h1 with the title -->
+        黄金の太陽 <br />
+        GOLDEN SUN
+      </h1>
+      <nav class="nav">
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li class="dropdown">
+            <a class="nav-link"><span>Classes</span></a>
+            <ul class="dropdown-content">
+              <li><a href="kendo.html" class="nav-link">Kendo</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a class="nav-link"
+              ><span>Our Shop</span><i class="fa fa-chevron-down"></i
+            ></a>
+            <ul class="dropdown-content">
+              <li class="sub-dropdown">
+                <a class="nav-link"
+                  ><span>Japanese Swords</span>
+                  <i class="fa fa-chevron-right"></i
+                ></a>
+                <ul class="sub-dropdown-content">
+                  <li><a href="katana.html" class="nav-link">Katana</a></li>
+                  <li>
+                    <a href="wakizashi.html" class="nav-link">Wakizashi</a>
+                  </li>
+                </ul>
+              </li>
 
-            <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
-          </ul>
-        </li>
+              <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
+            </ul>
+          </li>
 
-        <li><a class="nav-link" href="#about-us">About us</a></li>
-        <li><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+          <li><a class="nav-link" href="#about-us">About us</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <main>
-        <img src="https://avatars.mds.yandex.net/i?id=1703f7d36d731e660173a00547a368ae_l-4724533-images-thumbs&ref=rim&n=13&w=2000&h=1351" class="start_background_img" alt="Shop Books">
-        <div class="start_block">
-            <h1 class="books_shop">Books Shop</h1>
-            <p>Buy and learn for your techniques</p>
-        </div>
-        <section class="book_section">
-            <ul style="display: flex; flex-direction: column; row-gap: 25px;">
-                <li class="li_elem_list">
-                    <div>
-                       <h2>"The Book of Five Rings" by Miyamoto Musashi</h2>
-                        <p>A classic work by the legendary swordsman Musashi, this book covers strategies and principles of combat and swordsmanship</p> 
-                        <p>Price: 39.99$</p>
-                    </div>
-                    <img src="https://m.media-amazon.com/images/I/51xW6kC6tFL._AC_UF1000,1000_QL80_.jpg" width="150" height="200">
-                </li>
+      <img
+        src="https://avatars.mds.yandex.net/i?id=1703f7d36d731e660173a00547a368ae_l-4724533-images-thumbs&ref=rim&n=13&w=2000&h=1351"
+        class="start_background_img"
+        alt="Shop Books"
+      />
+      <div class="start_block">
+        <h1 class="books_shop">Books Shop</h1>
+        <p>Buy and learn for your techniques</p>
+      </div>
+      <section class="book_section">
+        <ul style="display: flex; flex-direction: column; row-gap: 25px">
+          <li class="li_elem_list">
+            <div>
+              <h2>"The Book of Five Rings" by Miyamoto Musashi</h2>
+              <p>
+                A classic work by the legendary swordsman Musashi, this book
+                covers strategies and principles of combat and swordsmanship
+              </p>
+              <p>Price: 39.99$</p>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/51xW6kC6tFL._AC_UF1000,1000_QL80_.jpg"
+              width="150"
+              height="200"
+            />
+          </li>
 
-                <li class="li_elem_list">
-                    <div>
-                       <h2>"Hagakure: The Book of the Samurai" by Yamamoto Tsunetomo</h2>
-                        <p>A philosophical guide on bushido, the way of the samurai, which includes aspects of swordsmanship and discipline</p>
-                        <p>Price: 41.99$</p>
-                    </div>
-                    <img src="https://m.media-amazon.com/images/I/51-p+kOBduL._AC_UF1000,1000_QL80_.jpg" width="150" height="200">
-                </li>
+          <li class="li_elem_list">
+            <div>
+              <h2>"Hagakure: The Book of the Samurai" by Yamamoto Tsunetomo</h2>
+              <p>
+                A philosophical guide on bushido, the way of the samurai, which
+                includes aspects of swordsmanship and discipline
+              </p>
+              <p>Price: 41.99$</p>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/51-p+kOBduL._AC_UF1000,1000_QL80_.jpg"
+              width="150"
+              height="200"
+            />
+          </li>
 
-                <li class="li_elem_list">
-                    <div>
-                       <h2>"The Sword of No-Sword" by John Stevens</h2>
-                        <p>A biography of master swordsman Yamaoka Tesshu, including his teachings on martial arts and swordsmanship.</p> 
-                        <p>Price: 37.99$</p>
-                      </div>
-                    <img src="https://m.media-amazon.com/images/I/91URtcjMwEL._AC_UF1000,1000_QL80_.jpg" width="150" height="200">
-                </li>
+          <li class="li_elem_list">
+            <div>
+              <h2>"The Sword of No-Sword" by John Stevens</h2>
+              <p>
+                A biography of master swordsman Yamaoka Tesshu, including his
+                teachings on martial arts and swordsmanship.
+              </p>
+              <p>Price: 37.99$</p>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/91URtcjMwEL._AC_UF1000,1000_QL80_.jpg"
+              width="150"
+              height="200"
+            />
+          </li>
 
-                <li class="li_elem_list">
-                    <div>
-                       <h2>"The Unfettered Mind" by Takuan Soho</h2>
-                        <p>A collection of letters written by a Zen master to sword masters, discussing mental states in combat and swordsmanship.</p> 
-                        <p>Price: 35.99$</p>
-                    </div>
-                    <img src="https://m.media-amazon.com/images/I/51EehA1A32L._AC_UF1000,1000_QL80_.jpg" width="150" height="200">
-                </li>
+          <li class="li_elem_list">
+            <div>
+              <h2>"The Unfettered Mind" by Takuan Soho</h2>
+              <p>
+                A collection of letters written by a Zen master to sword
+                masters, discussing mental states in combat and swordsmanship.
+              </p>
+              <p>Price: 35.99$</p>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/51EehA1A32L._AC_UF1000,1000_QL80_.jpg"
+              width="150"
+              height="200"
+            />
+          </li>
 
-                <li class="li_elem_list">
-                    <div>
-                       <h2>"Japanese Swordsmanship: Technique and Practice" by Gordon Warner & Donn F. Draeger</h2>
-                        <p>A practical guide to techniques and forms of traditional Japanese swordsmanship.</p>
-                        <p>Price: 29.99$</p> 
-                    </div>
-                    <img src="https://m.media-amazon.com/images/I/61fUYKmByEL._AC_UF1000,1000_QL80_.jpg" width="150" height="200">
-                </li>
-            </ul>
-        </section>
+          <li class="li_elem_list">
+            <div>
+              <h2>
+                "Japanese Swordsmanship: Technique and Practice" by Gordon
+                Warner & Donn F. Draeger
+              </h2>
+              <p>
+                A practical guide to techniques and forms of traditional
+                Japanese swordsmanship.
+              </p>
+              <p>Price: 29.99$</p>
+            </div>
+            <img
+              src="https://m.media-amazon.com/images/I/61fUYKmByEL._AC_UF1000,1000_QL80_.jpg"
+              width="150"
+              height="200"
+            />
+          </li>
+        </ul>
+      </section>
     </main>
     <!-- Footer -->
     <footer>
-        <p>
-          Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.
-        </p>
+      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
     </footer>
-</body>
+  </body>
 </html>
