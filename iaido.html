@@ -147,6 +147,7 @@
         background-image: url("images/iaido.jpg");
         background-size: cover;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
       }
@@ -202,6 +203,25 @@
       .stages-in-training li {
         margin-top: 10px;
       }
+      .explore-link {
+        width: 275px;
+        margin-top: 10px;
+      }
+      .button {
+        width: 100%;
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        border-radius: 7px;
+        cursor: pointer;
+        padding: 5px 0;
+        transition: backgound-color 0.3s ease, color 0.3s ease;
+      }
+      .button:hover {
+        background-color: white;
+        color: #070707;
+        transition: backgound-color 0.3s ease, color 0.3s ease;
+      }
     </style>
   </head>
   <body>
@@ -253,6 +273,9 @@
     <main>
       <section class="iaido-section-top">
         <div class="h3-description">Iaido (居合道)</div>
+        <a href="class_booking.html" class="explore-link">
+          <button class="button">Enroll</button>
+        </a>
       </section>
       <section class="iaido-section-middle">
         <div class="micro-chapter">
