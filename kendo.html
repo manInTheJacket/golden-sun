@@ -16,211 +16,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-        body {
-        font-family: "Red Rose";
-        display: flex;
-        padding-top: 30px;
-        flex-direction: column;
-        align-items: center;
-        margin: 0px;
-        background: #070707;
-        color: white;
-      }
-        header {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      p {
-        line-height: 1.8;
-      }
-      h1 {
-        font-family: "Josefin Sans";
-        font-size: 24px;
-        font-weight: 700;
-        padding-left: 190px;
-      }
-      .header > h1 {
-        font-family: "Josefin Sans";
-        font-size: 24px;
-        font-weight: 700;
-        padding-left: 190px;
-        text-align: left;
-      }
-      .nav {
-        display: flex;
-        width: 53%;
-        padding-right: 190px;
-      }
-      .nav ul{
-        list-style-type: none;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-      }
-      .nav a {
-        font-family: "Josefin Sans";
-        font-size: 20px;
-        font-weight: 400;
-        text-decoration: none;
-        color: white;
-        font-weight: 400;
-      }
-      .nav-link {
-        padding: 16px 6px;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        color: #ffffff; 
-      }
-      
-      .nav-link:after {
-        content: '';
-        position: absolute; 
-        width: 100%; 
-        transform: scaleX(0);
-        height: 2px; 
-        bottom: 0; 
-        left: 0; 
-        background-color: #ffffff; 
-        transform-origin: bottom right; 
-        transition: transform 0.25s ease-out; 
-      }
-      
-      .nav-link:hover:after {
-        transform: scaleX(1); 
-        transform-origin: bottom left; 
-      }
-      .nav span{
-        margin-right: 5px;
-        }
-      main {
-        padding: 0 190px;
-      }
-      footer {
-        padding: 10px 0;
-        width: 100%;
-        text-align: center;
-        background-color: white;
-        color: #070707;
-      }
-      footer p {
-        font-family: "Josefin Sans";
-        font-weight: 400;
-        font-size: 20px;
-        margin: 0;
-      }
-      .start_background_img {
-        position: absolute;
-        z-index: -3;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        opacity: 0.4;
-      }
-      .start_block {
-        margin-top: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-      .books_shop {
-        font-size: 52px;
-        padding: 0 0;
-      }
-      .margin-top-210 {
-        margin-top: 210px;
-      }
-      .div-block {
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-      }
-      .reverse {
-        flex-direction: row-reverse;
-      }
-      details {
-        padding: 16px;
-        border-radius: 8px;
-      }
-      .grey {
-        background-color: rgb(23, 23, 23);
-      }
-      .dropdown:hover .fa-chevron-down, .sub-dropdown:hover .fa-chevron-right{
-            transform: rotate(180deg);
-        }
-        /* ===== Dropdown ===== */
-        .dropdown{
-            position: relative;
-        }
-        .nav .dropdown-content{
-            display: none;
-            position: absolute;
-            left: 0;
-            background: #070707;
-            min-width: 240px;
-            animation: slideUp .3s;
-        }
-        .dropdown-content li{
-            padding: 10px;
-        }
-        .dropdown:hover .dropdown-content{
-            display: block;
-        }
-        /* ===== Sub - Dropdown ===== */
-        .nav .sub-dropdown-content{
-           display: none;
-           position: absolute;
-           left: 100%;
-           top: 10%;
-           background: #070707;
-           min-width: 240px;
-           animation: slideUp .3s;
-        }
-        .dropdown-link{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .sub-dropdown:hover .sub-dropdown-content{
-            display: block;
-        }
-        .fa-chevron-down, .fa-chevron-right{
-        font-size: 12px;
-        transition: .3s;
-        }
-        .explore-link {
-        width: 275px;
-        margin-top: 10px;
-        }
-        .button {
-        width: 100%;
-        background-color: transparent;
-        color: white;
-        border: 1px solid white;
-        border-radius: 7px;
-        cursor: pointer;
-        padding: 5px 0;
-        transition: backgound-color 0.3s ease, color 0.3s ease;
-        }
-        .button:hover {
-        background-color: white;
-        color: #070707;
-        transition: backgound-color 0.3s ease, color 0.3s ease;
-        }
-    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/kendo.css">
 </head>
 <body>
   <!-- Header and Navigation -->
-  <header class="header">
+  <header>
     <h1>
       <!-- h1 with the title -->
       黄金の太陽 <br />
@@ -266,7 +69,7 @@
     <main>
         <img src="https://mma.metaratings.ru/upload/iblock/ec1/ec1a1b7c5ad46712deb1360f8b54932a.jpg" class="start_background_img" alt="Shop Books">
         <div class="start_block">
-            <h1 class="books_shop">Kendo (剣道)</h1>
+            <h2 class="start-description">Kendo (剣道)</h2>
             <p>the Japanese martial art of bamboo sword fencing.</p>
             <a href="class_booking.html" class="explore-link">
               <button class="button">Enroll</button>

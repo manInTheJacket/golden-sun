@@ -1,0 +1,156 @@
+/* CSS file of common classes for all pages.*/
+/* Header by Kenbay I.*/
+header {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header > h1 {
+  font-family: "Josefin Sans";
+  font-size: 24px;
+  font-weight: 700;
+  padding-left: 190px;
+  text-align: left;
+}
+.nav {
+  display: flex;
+  width: 53%;
+  padding-right: 190px;
+}
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav a {
+  font-family: "Josefin Sans";
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+}
+.nav-link {
+  padding: 16px 6px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+}
+
+.nav-link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.nav span {
+  margin-right: 5px;
+}
+.fa-chevron-down,
+.fa-chevron-right {
+  font-size: 12px;
+  transition: 0.3s;
+}
+.dropdown:hover .fa-chevron-down,
+.sub-dropdown:hover .fa-chevron-right {
+  transform: rotate(180deg);
+}
+/* ===== Dropdown ===== */
+.dropdown {
+  position: relative;
+}
+.nav .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background: #070707;
+  min-width: 240px;
+  animation: slideUp 0.3s;
+}
+.dropdown-content li {
+  padding: 10px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* ===== Sub - Dropdown ===== */
+.nav .sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 10%;
+  background: #070707;
+  min-width: 240px;
+  animation: slideUp 0.3s;
+}
+@keyframes slideUp {
+  from {
+    margin-top: 20px;
+  }
+  to {
+    margin-top: 0;
+  }
+}
+.dropdown-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sub-dropdown:hover .sub-dropdown-content {
+  display: block;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  background-color: white;
+  color: #070707;
+}
+footer p {
+  font-family: "Josefin Sans";
+  font-weight: 400;
+  font-size: 20px;
+  margin: 0;
+}
+
+/* Explore-link for buttons */
+.explore-link {
+  width: 275px;
+  margin-top: 10px;
+}
+.button {
+  width: 100%;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+  padding: 5px 0;
+  transition: backgound-color 0.3s ease, color 0.3s ease;
+}
+.button:hover {
+  background-color: white;
+  color: #070707;
+  transition: backgound-color 0.3s ease, color 0.3s ease;
+}

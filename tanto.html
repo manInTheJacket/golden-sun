@@ -16,277 +16,12 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <style>
-      body {
-        font-family: "Red Rose";
-        display: flex;
-        padding-top: 30px;
-        flex-direction: column;
-        align-items: center;
-        margin: 0px;
-        background: #070707;
-        color: white;
-      }
-      header {
-        position: absolute;
-        z-index: 2;
-        top: 0;
-        left: 0;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .header > h1 {
-        font-family: "Josefin Sans";
-        font-size: 24px;
-        font-weight: 700;
-        padding-left: 190px;
-        text-align: left;
-      }
-      .nav {
-        display: flex;
-        width: 53%;
-        padding-right: 190px;
-      }
-      .nav ul {
-        list-style-type: none;
-        display: flex;
-        width: 100%;
-        justify-content: space-between;
-      }
-      .nav a {
-        font-family: "Josefin Sans";
-        font-size: 20px;
-        font-weight: 400;
-        text-decoration: none;
-        color: white;
-        font-weight: 400;
-      }
-      .nav-link {
-        padding: 16px 6px;
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        color: #ffffff;
-      }
-
-      .nav-link:after {
-        content: "";
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #ffffff;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-      }
-
-      .nav-link:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-      }
-      .nav span {
-        margin-right: 5px;
-      }
-      .fa-chevron-down,
-      .fa-chevron-right {
-        font-size: 12px;
-        transition: 0.3s;
-      }
-      .dropdown:hover .fa-chevron-down,
-      .sub-dropdown:hover .fa-chevron-right {
-        transform: rotate(180deg);
-      }
-      /* ===== Dropdown ===== */
-      .dropdown {
-        position: relative;
-      }
-      .nav .dropdown-content {
-        display: none;
-        position: absolute;
-        left: 0;
-        background: #070707;
-        min-width: 240px;
-        animation: slideUp 0.3s;
-      }
-      .dropdown-content li {
-        padding: 10px;
-      }
-      .dropdown:hover .dropdown-content {
-        display: block;
-      }
-      /* ===== Sub - Dropdown ===== */
-      .nav .sub-dropdown-content {
-        display: none;
-        position: absolute;
-        left: 100%;
-        top: 10%;
-        background: #070707;
-        min-width: 240px;
-        animation: slideUp 0.3s;
-      }
-      @keyframes slideUp {
-        from {
-          margin-top: 20px;
-        }
-        to {
-          margin-top: 0;
-        }
-      }
-      .dropdown-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .sub-dropdown:hover .sub-dropdown-content {
-        display: block;
-      }
-      main {
-        padding: 0 190px;
-      }
-      footer {
-        padding: 10px 0;
-        margin-top: 100px;
-        width: 100%;
-        text-align: center;
-        background-color: white;
-        color: #070707;
-      }
-      footer p {
-        font-family: "Josefin Sans";
-        font-weight: 400;
-        font-size: 20px;
-        margin: 0;
-      }
-      .main-header {
-        margin-top: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .main-header > h1 {
-        font-family: "Josefin Sans";
-        font-size: 56px;
-        font-weight: 700;
-        text-align: center;
-      }
-
-      .main-header > details {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .main-header > details > p {
-        text-align: center;
-        max-width: 1000px;
-      }
-
-      /* Product Grid CSS */
-      .product-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 30px;
-        margin-top: 100px;
-      }
-
-      .product-card:hover {
-        transform: scale(1.05);
-      }
-
-      .product-card {
-        background-color: #1e1c1c;
-        overflow: hidden;
-        width: 300px;
-        height: 400px;
-        text-align: center;
-        color: white;
-        transition: transform 0.2s;
-      }
-
-      .product-image {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-      }
-
-      .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.3s ease, height 0.3s ease;
-      }
-
-      .default-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 1;
-      }
-
-      .hover-image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 2;
-        opacity: 0;
-        transition: height 0.3s ease, opacity 0.3s ease;
-      }
-
-      .product-image:hover .hover-image {
-        height: 300px;
-        cursor: pointer;
-        opacity: 1;
-      }
-
-      .product-image:hover .default-image {
-        opacity: 0;
-        cursor: pointer;
-      }
-
-      .product-name {
-        font-family: "Josefin Sans";
-        font-weight: 500;
-        font-size: 20px;
-        margin: 25px 0 10px 20px;
-        text-align: left;
-      }
-
-      .product-price {
-        font-family: "Josefin Sans";
-        font-size: 16px;
-        margin-left: 20px;
-        color: rgb(193, 189, 189);
-        text-align: left;
-      }
-      .start_background_img {
-        position: absolute;
-        z-index: -3;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        object-fit: cover;
-        opacity: 0.4;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/tanto.css" />
   </head>
   <body>
     <!-- Header and Navigation by Kenday I. -->
-    <header class="header">
+    <header>
       <h1>
         <!-- h1 with the title -->
         黄金の太陽 <br />
@@ -331,28 +66,56 @@
 
     <!-- Main Content -->
     <main>
-        <img src="./images/output.jpg" class="start_background_img" alt="Tanto Shop">
+      <img
+        src="./images/output.jpg"
+        class="start_background_img"
+        alt="Tanto Shop"
+      />
       <div class="main-header">
         <h1>TANTO SWORD</h1>
         <details>
           <summary>More info</summary>
           <h2>
-            <span>Explore the Essence of Precision with Our Tanto Collection</span>
+            <span
+              >Explore the Essence of Precision with Our Tanto Collection</span
+            >
           </h2>
           <p>
-            Discover the refined elegance of the <strong><i>Tanto</i></strong> (短刀), a traditional Japanese dagger renowned for its meticulous craftsmanship and historical significance. Rooted deeply in Samurai culture, the tanto represents the embodiment of precision and artistry in blade-making.
+            Discover the refined elegance of the
+            <strong><i>Tanto</i></strong> (短刀), a traditional Japanese dagger
+            renowned for its meticulous craftsmanship and historical
+            significance. Rooted deeply in Samurai culture, the tanto represents
+            the embodiment of precision and artistry in blade-making.
           </p>
           <h2>
-            <span>Authentic Japanese <strong><i>Tanto</i></strong></span>
+            <span
+              >Authentic Japanese <strong><i>Tanto</i></strong></span
+            >
           </h2>
           <p>
-            The <strong><i>Tanto</i></strong>, characterized by its distinctive blade length and shape, is not merely a weapon but a symbol of the Samurai’s honor and skill. The blade typically ranges from 6 to 12 inches, allowing for a balance of effectiveness and practicality. Crafted with the same meticulous attention to detail as our <strong><i>Katana</i></strong> (刀) swords, each <strong><i>Tanto</i></strong> in our collection is a masterful creation forged from high-quality Tamahagane steel (玉鋼), T10, or high carbon. The forging process ensures not only durability but also a sharpness that reflects the essence of the Samurai ethos.
+            The <strong><i>Tanto</i></strong
+            >, characterized by its distinctive blade length and shape, is not
+            merely a weapon but a symbol of the Samurai’s honor and skill. The
+            blade typically ranges from 6 to 12 inches, allowing for a balance
+            of effectiveness and practicality. Crafted with the same meticulous
+            attention to detail as our <strong><i>Katana</i></strong> (刀)
+            swords, each <strong><i>Tanto</i></strong> in our collection is a
+            masterful creation forged from high-quality Tamahagane steel (玉鋼),
+            T10, or high carbon. The forging process ensures not only durability
+            but also a sharpness that reflects the essence of the Samurai ethos.
           </p>
           <p>
-            Our <strong><i>Tanto</i></strong> collection offers a variety of styles, each piece showcasing the traditional techniques of Japanese swordsmithing. Whether used as a ceremonial piece, a collector's item, or for practical purposes, each <strong><i>Tanto</i></strong> carries with it the spirit and precision of the ancient warriors who wielded them.
+            Our <strong><i>Tanto</i></strong> collection offers a variety of
+            styles, each piece showcasing the traditional techniques of Japanese
+            swordsmithing. Whether used as a ceremonial piece, a collector's
+            item, or for practical purposes, each
+            <strong><i>Tanto</i></strong> carries with it the spirit and
+            precision of the ancient warriors who wielded them.
           </p>
           <p>
-            Embrace the artistry and heritage of the Samurai with a <strong><i>Tanto</i></strong> that speaks to the heart of Japanese craftsmanship.
+            Embrace the artistry and heritage of the Samurai with a
+            <strong><i>Tanto</i></strong> that speaks to the heart of Japanese
+            craftsmanship.
           </p>
         </details>
       </div>
