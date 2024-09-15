@@ -20,6 +20,7 @@ main {
   height: 100vh;
   object-fit: cover;
   opacity: 0.4;
+  filter: grayscale(100%);
 }
 .start_block_for_booking {
   margin-top: 50px;
