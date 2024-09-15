@@ -56,6 +56,9 @@
                   <li>
                     <a href="wakizashi.html" class="nav-link">Wakizashi</a>
                   </li>
+                  <li>
+                    <a href="tanto.html" class="nav-link">Tanto</a>
+                  </li>
                 </ul>
               </li>
               <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
@@ -76,7 +79,7 @@
         <h2>Class Booking</h2>
       </div>
 
-      <form action="/register" method="POST" class="form_block">
+      <form action="./payment.html" method="POST" class="form_block">
         <h2>Register for Kendo and Iaido Classes</h2>
 
         <!-- Full Name -->
@@ -114,6 +117,12 @@
         <select id="classType" name="classType" required class="select">
           <option value="kendo" style="color: black">Kendo</option>
           <option value="iaido" style="color: black">Iaido</option></select
+        ><br /><br />
+        
+        <label for="schedule">Weekdays:</label>
+        <select id="schedule" name="schedule" required class="select">
+          <option value="10" style="color: black">Monday - Wednesday - Friady</option>
+          <option value="12" style="color: black">Tuesday - Thursday - Saturday</option></select
         ><br /><br />
 
         <!-- Preferred Schedule -->

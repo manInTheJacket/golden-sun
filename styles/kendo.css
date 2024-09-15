@@ -34,6 +34,9 @@ main {
   object-fit: cover;
   opacity: 0.4;
 }
+img {
+  filter: grayscale(100%);
+}
 .start_block {
   margin-top: 300px;
   display: flex;
