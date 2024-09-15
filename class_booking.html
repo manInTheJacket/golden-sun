@@ -39,6 +39,7 @@
             <ul class="dropdown-content">
               <li><a href="kendo.html" class="nav-link">Kendo</a></li>
               <li><a href="iaido.html" class="nav-link">Iaido</a></li>
+              <li><a href="kenjutsu.html" class="nav-link">Kenjutsu</a></li>
             </ul>
           </li>
           <li class="dropdown">
@@ -79,8 +80,8 @@
         <h2>Class Booking</h2>
       </div>
 
-      <form action="./payment.html" method="POST" class="form_block">
-        <h2>Register for Kendo and Iaido Classes</h2>
+      <form action="payment.html" method="POST" class="form_block">
+        <h2>Register for Kendo, Iaido, Kenjutsu Classes</h2>
 
         <!-- Full Name -->
         <label for="fullName">Full Name:</label>
@@ -116,13 +117,18 @@
         <label for="classType">Class Type:</label>
         <select id="classType" name="classType" required class="select">
           <option value="kendo" style="color: black">Kendo</option>
-          <option value="iaido" style="color: black">Iaido</option></select
+          <option value="iaido" style="color: black">Iaido</option>
+          <option value="iaido" style="color: black">Kenjutsu</option></select
         ><br /><br />
-        
+
         <label for="schedule">Weekdays:</label>
         <select id="schedule" name="schedule" required class="select">
-          <option value="10" style="color: black">Monday - Wednesday - Friady</option>
-          <option value="12" style="color: black">Tuesday - Thursday - Saturday</option></select
+          <option value="10" style="color: black">
+            Monday - Wednesday - Friday
+          </option>
+          <option value="12" style="color: black">
+            Tuesday - Thursday - Saturday
+          </option></select
         ><br /><br />
 
         <!-- Preferred Schedule -->
