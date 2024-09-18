@@ -8,7 +8,7 @@ body {
 .contact-section-top {
   width: 100%;
   height: 100vh;
-  background-image: url("/images/contact-us-background.png");
+  background-image: url("../images/contact-us-background.png");
   background-size: cover;
 }
 .h3-description {
