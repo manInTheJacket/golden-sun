@@ -22,51 +22,84 @@
     <link rel="stylesheet" href="styles/index.css" />
   </head>
   <body>
-    <!-- Header and Navigation by Kenbay I.-->
+    <!-- Header and Navigation by Kenday I. -->
     <header>
-      <h1>
-        <!-- h1 with the title -->
-        黄金の太陽 <br />
-        GOLDEN SUN
-      </h1>
-      <nav class="nav">
-        <ul>
-          <li><a class="nav-link" href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a class="nav-link"
-              ><span>Classes</span><i class="fa fa-chevron-down"></i
-            ></a>
-            <ul class="dropdown-content">
-              <li><a href="kendo.html" class="nav-link">Kendo</a></li>
-              <li><a href="iaido.html" class="nav-link">Iaido</a></li>
-              <li><a href="kenjutsu.html" class="nav-link">Kenjutsu</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a class="nav-link"
-              ><span>Our Shop</span><i class="fa fa-chevron-down"></i
-            ></a>
-            <ul class="dropdown-content">
-              <li class="sub-dropdown">
-                <a class="nav-link"
-                  ><span>Japanese Swords</span>
-                  <i class="fa fa-chevron-right"></i
+      <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h1>
+              <!-- h1 with the title -->
+              黄金の太陽 <br />
+              GOLDEN SUN
+            </h1></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">
+                  Classes <i class="fa fa-chevron-down"></i
                 ></a>
-                <ul class="sub-dropdown-content">
-                  <li><a href="katana.html" class="nav-link">Katana</a></li>
+                <ul
+                  class="navbar-nav dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li><a class="nav-link" href="kendo.html">Kendo</a></li>
+                  <li><a class="nav-link" href="iaido.html">Iaido</a></li>
                   <li>
-                    <a href="wakizashi.html" class="nav-link">Wakizashi</a>
-                  </li>
-                  <li>
-                    <a href="tanto.html" class="nav-link">Tanto</a>
+                    <a class="nav-link" href="kenjutsu.html">Kenjutsu</a>
                   </li>
                 </ul>
               </li>
-              <li><a class="nav-link" href="shop_books.html">Book Shop</a></li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#">
+                  Our Shop <i class="fa fa-chevron-down"></i
+                ></a>
+                <ul
+                  class="navbar-nav dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li class="nav-item sub-dropdown">
+                    <a class="nav-link" href="#">
+                      Japanese Swords <i class="fa fa-chevron-right"></i>
+                    </a>
+                    <ul
+                      class="navbar-nav sub-dropdown-content"
+                      aria-labelledby="navbarSubdropdown"
+                    >
+                      <li><a class="nav-link" href="katana.html">Katana</a></li>
+                      <li>
+                        <a class="nav-link" href="wakizashi.html">Wakizashi</a>
+                      </li>
+                      <li>
+                        <a class="nav-link" href="tanto.html">Tanto</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="shop_books.html">Book Shop</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
             </ul>
-          </li>
-          <li><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- Main Content -->

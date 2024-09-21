@@ -10,25 +10,34 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-header > h1 {
+header > nav > div > a > h1 {
   font-family: "Josefin Sans";
   font-size: 24px;
   font-weight: 700;
   padding-left: 190px;
+  padding-right: 250px;
   text-align: left;
 }
-.nav {
+.navbar {
   display: flex;
-  width: 53%;
+  width: 100%;
   padding-right: 190px;
 }
-.nav ul {
+.nav-item {
+  width: fit-content;
+}
+.navbar-nav {
   list-style-type: none;
   display: flex;
   width: 100%;
   justify-content: space-between;
+  flex-direction: row;
+  margin: 0 auto;
 }
-.nav a {
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+.navbar a {
   font-family: "Josefin Sans";
   font-size: 20px;
   font-weight: 400;
@@ -61,13 +70,11 @@ header > h1 {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-.nav span {
-  margin-right: 5px;
-}
 .fa-chevron-down,
 .fa-chevron-right {
   font-size: 12px;
   transition: 0.3s;
+  color: #ffffff;
 }
 .dropdown:hover .fa-chevron-down,
 .sub-dropdown:hover .fa-chevron-right {
@@ -77,28 +84,30 @@ header > h1 {
 .dropdown {
   position: relative;
 }
-.nav .dropdown-content {
+.navbar .dropdown-menu {
   display: none;
   position: absolute;
   left: 0;
   background: #070707;
-  min-width: 240px;
+  max-width: 100px;
+  min-width: 220px;
   animation: slideUp 0.3s;
 }
-.dropdown-content li {
+.dropdown-menu li {
   padding: 10px;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-menu {
   display: block;
 }
 /* ===== Sub - Dropdown ===== */
-.nav .sub-dropdown-content {
+.navbar .sub-dropdown-content {
   display: none;
+  padding: 10px;
   position: absolute;
   left: 100%;
   top: 10%;
   background: #070707;
-  min-width: 240px;
+  min-width: 200px;
   animation: slideUp 0.3s;
 }
 @keyframes slideUp {
@@ -108,11 +117,6 @@ header > h1 {
   to {
     margin-top: 0;
   }
-}
-.dropdown-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .sub-dropdown:hover .sub-dropdown-content {
   display: block;
