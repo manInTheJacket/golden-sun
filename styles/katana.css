@@ -83,7 +83,9 @@ main {
   object-fit: cover;
   z-index: 1;
 }
-
+.height-600px {
+  height: 600px;
+}
 .hover-image {
   position: absolute;
   top: 0;
