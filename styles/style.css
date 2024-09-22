@@ -90,7 +90,6 @@ header > nav > div > a > h1 {
   left: 0;
   background: #070707;
   max-width: 100px;
-  min-width: 220px;
   animation: slideUp 0.3s;
 }
 .dropdown-menu li {
