@@ -167,24 +167,57 @@
           <option value="iaido" style="color: black">Kenjutsu</option></select
         ><br /><br />
 
-        <label for="schedule">Weekdays:</label>
-        <select id="schedule" name="schedule" required class="select">
-          <option value="10" style="color: black">
-            Monday - Wednesday - Friday
-          </option>
-          <option value="12" style="color: black">
-            Tuesday - Thursday - Saturday
-          </option></select
-        ><br /><br />
+        <!-- Bootstrap component -->
+        <div class="container mt-5">
+          <p>Select Weekdays</p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-white">Select</th>
+                <th class="text-white">Monday</th>
+                <th class="text-white">Tuesday</th>
+                <th class="text-white">Wednesday</th>
+                <th class="text-white">Thursday</th>
+                <th class="text-white">Friday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-white">Choose Day</td>
+                <td><input type="checkbox" name="weekday" value="Monday"></td>
+                <td><input type="checkbox" name="weekday" value="Tuesday"></td>
+                <td><input type="checkbox" name="weekday" value="Wednesday"></td>
+                <td><input type="checkbox" name="weekday" value="Thursday"></td>
+                <td><input type="checkbox" name="weekday" value="Friday"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <!-- Preferred Schedule -->
-        <label for="schedule">Preferred Schedule:</label>
-        <select id="schedule" name="schedule" required class="select">
-          <option value="10" style="color: black">10:00 - 12:00</option>
-          <option value="12" style="color: black">12:30 - 14:30</option>
-          <option value="15" style="color: black">15:00 - 17:00</option>
-          <option value="17" style="color: black">17:30 - 19:30</option></select
-        ><br /><br />
+        <div class="container mt-5">
+          <p>Select Time</p>
+          <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th class="text-white">Select</th>
+                <th class="text-white">10:00-12:00</th>
+                <th class="text-white">12:30-14:30</th>
+                <th class="text-white">15:00-17:00</th>
+                <th class="text-white">17:30-19:30</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="text-white">Choose Day</td>
+                <td><input type="radio" name="time" value="10:00-12:00"></td>
+                <td><input type="radio" name="time" value="12:30-14:30"></td>
+                <td><input type="radio" name="time" value="15:00-17:00"></td>
+                <td><input type="radio" name="time" value="17:30-19:30"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
         <label>Select Teacher:</label><br />
 
