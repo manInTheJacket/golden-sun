@@ -29,7 +29,6 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    
 
     <!-- External CSS -->
     <link rel="stylesheet" href="styles/style.css" />
@@ -39,7 +38,7 @@
     <!-- Header and Navigation by Kenday I. -->
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="index.html">
             <h1>
               <!-- h1 with the title -->
@@ -117,15 +116,21 @@
       </nav>
     </header>
     <main>
-      <section class="iaido-section-top">
-        <div class="h3-description">Iaido (居合道)</div>
-        <a href="class_booking.html" class="explore-link">
-          <button class="button">Enroll</button>
-        </a>
+      <section class="iaido-section-top container-fluid">
+        <div
+          class="vh-100 d-flex flex-column justify-content-center align-items-center pb-3"
+        >
+          <div>
+            <h3 class="josefin fs-1 fw-bold">Iaido (居合道)</h3>
+          </div>
+          <a href="class_booking.html" class="">
+            <button class="btn btn-outline-light py-2 px-5">Enroll</button>
+          </a>
+        </div>
       </section>
-      <section class="iaido-section-middle">
-        <div class="micro-chapter">
-          <h3>About Iaido</h3>
+      <section class="container mt-5">
+        <div class="mb-5">
+          <h3 class="text-center fs-2 josefin">About Iaido</h3>
           <p>
             Iaido (居合道) is the art of drawing a Japanese sword from its
             scabbard to obtain advantage over an opponent. The sword is drawn to
@@ -133,8 +138,8 @@
             to save one's own life in the most efficient way.
           </p>
         </div>
-        <div class="micro-chapter">
-          <h3>History of Iaido</h3>
+        <div class="mb-5">
+          <h3 class="text-center fs-2 josefin">History of Iaido</h3>
           <p>
             The origins of the martial arts lie hidden in Japan’s early history.
             The first Japanese swords date back to the Yayoi period around 200
@@ -166,18 +171,19 @@
           </p>
         </div>
         <div>
-          <figure class="iaido-demonstration">
+          <figure class="d-flex flex-column align-items-center mb-5">
             <img
               src="images/iaido-demonstration.png"
               alt="A man practises his katana on a bamboo mat."
+              class="w-75 rounded"
             />
-            <figcaption class="iaido-figcaption">
+            <figcaption class="fst-italic">
               A man practises his katana on a bamboo tree.
             </figcaption>
           </figure>
         </div>
-        <div class="micro-chapter">
-          <h3>Equipment</h3>
+        <div class="mb-5">
+          <h3 class="text-center fs-2 josefin">Equipment</h3>
           <p>
             Originally, Iaido was trained with katanas – the extremely sharp
             Japanese swords. In order to prevent possible injuries, today Iaido
@@ -190,10 +196,10 @@
             advanced practitioners may also use sharp swords.
           </p>
         </div>
-        <div class="micro-chapter">
-          <h3>Stages in training</h3>
-          <ol class="stages-in-training">
-            <li>
+        <div class="mb-5">
+          <h3 class="text-center fs-2 josefin">Stages in training</h3>
+          <ol class="list-group list-group-numbered">
+            <li class="list-group-item bg-transparent text-white border-white">
               Keiko. This means quite simply training or practice. This is the
               stage during which the essential movements are perfected by slow
               repetition, by breaking the kata down into its component parts, by
@@ -205,7 +211,7 @@
               regular practice. Overlapping with it, from about the third or
               fourth year, the swordsman will begin the practice of Tanren.
             </li>
-            <li>
+            <li class="list-group-item bg-transparent text-white border-white">
               Tanren means to forge in the same way that a sword blade is
               forged, with hard work, and sweat, and many hours of dedication,
               folding together the hard and soft elements in the body, mind, and
@@ -220,7 +226,7 @@
               Kigurai (bearing, demeanour) develops, training moves into the
               phase called Renshu.
             </li>
-            <li>
+            <li class="list-group-item bg-transparent text-white border-white">
               Renshu. Ren means to polish, to perfect by continued practice of
               both keiko and tanren. It also means to polish the spirit and
               character through the requirements of detail and interpretation.
@@ -244,8 +250,24 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer>
-      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+    <footer class="row bg-white g-3 w-100 m-0" style="color: black">
+      <div class="col-4 d-none d-md-block align-self-center">
+        <h2 class="josefin fw-bold">
+          黄金の太陽 <br />
+          GOLDEN SUN
+        </h2>
+      </div>
+      <div class="col-6 col-md-4 align-self-center">
+        <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <p>Contacts</p>
+        <p>
+          City: Astana <br />
+          Address: Mangilik El, C1, Astana IT University <br />
+          Phone number: +852 2504 8145
+        </p>
+      </div>
     </footer>
   </body>
 </html>

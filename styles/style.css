@@ -14,14 +14,14 @@ header > nav > div > a > h1 {
   font-family: "Josefin Sans";
   font-size: 24px;
   font-weight: 700;
-  padding-left: 190px;
-  padding-right: 250px;
+  /* padding-left: 190px; */
+  padding-right: 20px;
   text-align: left;
 }
 .navbar {
   display: flex;
   width: 100%;
-  padding-right: 190px;
+  /* padding-right: 190px; */
 }
 .nav-item {
   width: fit-content;
@@ -121,22 +121,6 @@ header > nav > div > a > h1 {
   display: block;
 }
 
-/* Footer */
-footer {
-  margin-top: 30px;
-  padding: 10px 0;
-  width: 100%;
-  text-align: center;
-  background-color: white;
-  color: #070707;
-}
-footer p {
-  font-family: "Josefin Sans";
-  font-weight: 400;
-  font-size: 20px;
-  margin: 0;
-}
-
 /* Explore-link for buttons */
 .explore-link {
   width: 275px;
@@ -156,4 +140,7 @@ footer p {
   background-color: white;
   color: #070707;
   transition: backgound-color 0.3s ease, color 0.3s ease;
+}
+.josefin {
+  font-family: "Josefin Sans";
 }

@@ -24,22 +24,16 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/index.css" />
-
   </head>
   <body>
     <!-- Header and Navigation by Kenday I. -->
     <header>
       <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
+        <div class="container">
           <a class="navbar-brand" href="index.html">
             <h1>
               <!-- h1 with the title -->
@@ -118,22 +112,22 @@
     </header>
     <!-- Main Content -->
     <main>
-      <section class="section-top">
-        <div class="h3-description">
-          <h3>
+      <section class="section-top container-fluid">
+        <div class="josefin vh-100 d-flex justify-content-center pb-3">
+          <h3 class="align-self-end text-center fw-bold fs-1">
             JAPANESE <br />
             SWORDSMANSHIP SCHOOL
           </h3>
         </div>
       </section>
-      <section class="section-middle">
-        <div class="section-middle-text-img">
+      <section class="container pt-5">
+        <div class="d-flex flex-column align-items-center">
           <img
-            class="section-middle-img"
+            class="w-75 pb-2"
             src="images/Samurai-Rebellion.png"
             alt="Samurai with a katana"
           />
-          <div class="quote">
+          <div class="w-50 text-center">
             <blockquote
               cite="https://www.inspiringquotes.us/quotes/8HVi_CVP1TyHQ"
             >
@@ -151,51 +145,69 @@
           </div>
         </div>
       </section>
-      <section class="chapter">
-        <div class="chapter-h3-content">
-          <h3>Our classes</h3>
-          <div class="chapter-content">
-            <div class="chapter-text-and-img">
-              <img src="images/main-kendo.png" alt="Kendo" />
-              <h3>Kendo<br />剣道</h3>
-              <p>
+      <section class="container pt-5">
+        <h3 class="text-center mb-4">Our classes</h3>
+        <div class="row row-cols-1 gx-5 justify-content-center gy-5 py-sm-0">
+          <div class="col-10 col-sm-5 col-lg-3 card bg-transparent">
+            <img
+              src="images/main-kendo.png"
+              alt="Kendo"
+              class="card-img-top rounded chapter-img"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Kendo<br />剣道</h3>
+              <p class="card-text">
                 Modern Japanese martial art of fencing with two-handed bamboo
                 swords, originally developed as a safe form of sword training
                 for samurai.
               </p>
-              <a href="kendo.html" class="index-explore-link"
-                ><button class="button">Explore</button></a
-              >
+              <a href="kendo.html" class="w-100 btn btn-outline-light"
+                >Explore
+              </a>
             </div>
-            <div class="chapter-text-and-img">
-              <img src="images/main-iaido.png" alt="Iaido" />
-              <h3>Iaido<br />居合道</h3>
-              <p>
+          </div>
+          <div class="col-10 col-sm-5 col-lg-3 card bg-transparent">
+            <img
+              src="images/main-iaido.png"
+              alt="Iaido"
+              class="card-img-top rounded chapter-img"
+            />
+            <div class="card-body">
+              <h3 class="card-title">Iaido<br />居合道</h3>
+              <p class="card-text">
                 is a Japanese martial art that emphasizes being aware and
                 capable of quickly drawing the sword and responding to sudden
                 attacks.
               </p>
-              <a href="iaido.html" class="explore-link"
-                ><button class="button">Explore</button></a
+              <a href="iaido.html"
+                ><button class="w-100 btn btn-outline-light">Explore</button></a
               >
             </div>
           </div>
         </div>
       </section>
-      <section class="chapter">
-        <div class="chapter-h3-content">
-          <h3>About our school</h3>
-          <div class="chapter-content">
-            <div class="chapter-text-and-img">
-              <p>
+      <section class="container mt-5">
+        <div class="">
+          <h3 class="text-center">About our school</h3>
+          <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+            <div class="col-10 col-md-4 row row-cols-1 mb-3 gy-2">
+              <p class="col-12 order-2 order-md-1">
                 Our dojo is a space where students immerse themselves in the art
                 of fencing. It is equipped with all the necessary facilities to
                 provide a safe and focused environment for mastering techniques.
               </p>
-              <img src="images/our-dojo.png" alt="Our Dojo" />
+              <img
+                src="images/our-dojo.png"
+                alt="Our Dojo"
+                class="w-100 col-12 order-1 order-md-2 chapter-img"
+              />
             </div>
-            <div class="chapter-text-and-img">
-              <img src="images/our-coach.jpg" alt="Our Coach" />
+            <div class="col-10 col-md-4 row row-cols-1 mb-3 gy-2">
+              <img
+                src="images/our-coach.jpg"
+                alt="Our Coach"
+                class="w-100 chapter-img"
+              />
               <p>
                 Our coaches are experienced professionals with years of
                 competitive and teaching experience. They provide personalized
@@ -203,23 +215,48 @@
                 helping students reach their full potential.
               </p>
             </div>
-            <div class="chapter-text-and-img">
-              <p>
+            <div class="col-10 col-md-4 row row-cols-1 gy-2">
+              <p class="col-12 order-2 order-md-1">
                 We provide our own equipment for kendo training, ensuring safety
                 and quality for all students. Additionally, we have our own shop
                 offering a selection of books and swords, catering to those
                 looking to deepen their knowledge and skills in the art of
                 kendo.
               </p>
-              <img src="images/main-katana.png" alt="Katana" />
+              <img
+                src="images/main-katana.png"
+                alt="Katana"
+                class="w-100 col-12 order-1 order-md-2 chapter-img"
+              />
             </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
-    <footer>
-      <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+    <footer class="row bg-white g-3 w-100 m-0" style="color: black">
+      <div class="col-4 d-none d-md-block align-self-center">
+        <h2 class="josefin fw-bold">
+          黄金の太陽 <br />
+          GOLDEN SUN
+        </h2>
+      </div>
+      <div class="col-6 col-md-4 align-self-center">
+        <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+      </div>
+      <div class="col-6 col-md-4">
+        <p>Contacts</p>
+        <p>
+          City: Astana <br />
+          Address: Mangilik El, C1, Astana IT University <br />
+          Phone number: +852 2504 8145
+        </p>
+      </div>
     </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
