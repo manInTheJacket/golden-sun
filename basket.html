@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Golden Sun School</title>
+
+    <!-- Fonts: Josefin Sans for title, etc., and Red Rose for paragraphs, etc. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Red+Rose:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/shop-books.css" />
+  </head>
+<body>
+  <header>
+    <nav class="navbar w-100 d-flex navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <h1>
+            <!-- h1 with the title -->
+            黄金の太陽 <br />
+            GOLDEN SUN
+          </h1></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">
+                Classes <i class="fa fa-chevron-down"></i
+              ></a>
+              <ul
+                class="navbar-nav dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
+                <li><a class="nav-link" href="kendo.html">Kendo</a></li>
+                <li><a class="nav-link" href="iaido.html">Iaido</a></li>
+                <li>
+                  <a class="nav-link" href="kenjutsu.html">Kenjutsu</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link" href="#">
+                Our Shop <i class="fa fa-chevron-down"></i
+              ></a>
+              <ul
+                class="navbar-nav dropdown-menu"
+                aria-labelledby="navbarDropdown"
+              >
+                <li class="nav-item sub-dropdown">
+                  <a class="nav-link" href="#">
+                    Japanese Swords <i class="fa fa-chevron-right"></i>
+                  </a>
+                  <ul
+                    class="navbar-nav sub-dropdown-content"
+                    aria-labelledby="navbarSubdropdown"
+                  >
+                    <li><a class="nav-link" href="katana.html">Katana</a></li>
+                    <li>
+                      <a class="nav-link" href="wakizashi.html">Wakizashi</a>
+                    </li>
+                    <li>
+                      <a class="nav-link" href="tanto.html">Tanto</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="shop_books.html">Book Shop</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item-rel">
+              <a class="nav-link" href="basket.html">Basket</a>
+              <p class="score-number">4</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <img
+        src="./images/basket-fibers-2891317_1280.jpg"
+        class="start_background_img"
+        alt="Shop Books"
+        style="filter: grayscale(100%);"
+      />
+    <div class="start_block">
+      <h1 class="books_shop">Basket</h1>
+      <p>Here's your added goods</p>
+    </div>
+    <section class="book_section">
+      <ul style="display: flex; flex-direction: column; row-gap: 25px">
+        <li class="li_elem_list">
+          <div>
+            <h2>"The Book of Five Rings" by Miyamoto Musashi</h2>
+            <p>Price: 39.99$</p>
+            <p>Amount: 3</p>
+            <p>Total cost: 119.97$</p>
+            <button type="button" class="btn btn-success">Add 1</button>
+            <button type="button" class="btn btn-success">Remove 1</button>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/51xW6kC6tFL._AC_UF1000,1000_QL80_.jpg"
+            width="150"
+            height="200"
+          />
+        </li>
+
+        <li class="li_elem_list">
+          <div>
+            <h2>"Hagakure: The Book of the Samurai" by Yamamoto Tsunetomo</h2>
+            <p>Price: 41.99$</p>
+            <p>Amount: 3</p>
+            <p>Total cost: 125.97$</p>
+            <button type="button" class="btn btn-success">Add 1</button>
+            <button type="button" class="btn btn-success">Remove 1</button>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/51-p+kOBduL._AC_UF1000,1000_QL80_.jpg"
+            width="150"
+            height="200"
+          />
+        </li>
+
+        <li class="li_elem_list">
+          <div>
+            <h2>"The Sword of No-Sword" by John Stevens</h2>
+            <p>Price: 37.99$</p>
+            <p>Amount: 2</p>
+            <p>Total price: 75.98$</p>
+            <button type="button" class="btn btn-success">Add 1</button>
+            <button type="button" class="btn btn-success">Remove 1</button>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/91URtcjMwEL._AC_UF1000,1000_QL80_.jpg"
+            width="150"
+            height="200"
+          />
+        </li>
+
+        <li class="li_elem_list">
+          <div>
+            <h2>"The Unfettered Mind" by Takuan Soho</h2>
+            <p>Price: 35.99$</p>
+            <p>Amount: 2</p>
+            <p>Total price: 71.98$</p>
+            <button type="button" class="btn btn-success">Add 1</button>
+            <button type="button" class="btn btn-success">Remove 1</button>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/51EehA1A32L._AC_UF1000,1000_QL80_.jpg"
+            width="150"
+            height="200"
+          />
+        </li>
+
+        <li class="li_elem_list">
+          <div>
+            <h2>
+              "Japanese Swordsmanship: Technique and Practice" by Gordon
+              Warner & Donn F. Draeger
+            </h2>
+            <p>Price: 29.99$</p>
+            <p>Amount: 1</p>
+            <p>Total Price: 29.99$</p>
+            <button type="button" class="btn btn-success">Add 1</button>
+            <button type="button" class="btn btn-success">Remove 1</button>
+          </div>
+          <img
+            src="https://m.media-amazon.com/images/I/61fUYKmByEL._AC_UF1000,1000_QL80_.jpg"
+            width="150"
+            height="200"
+          />
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer
+      class="bg-white w-100 d-flex justify-content-center"
+      style="color: black"
+    >
+      <div class="row g-3 m-0 container">
+        <div class="col-4 d-none d-md-block align-self-center">
+          <h2 class="josefin fw-bold">
+            黄金の太陽 <br />
+            GOLDEN SUN
+          </h2>
+        </div>
+        <div class="col-6 col-md-4 align-self-center">
+          <p>Developed by Abdigaliyev Z. , Shayakhmetov A. , Kenbay I.</p>
+        </div>
+        <div class="col-6 col-md-4">
+          <p class="fw-bold">Contacts</p>
+          <p>
+            City: Astana <br />
+            Address: Mangilik El, C1, Astana IT University <br />
+            Phone number: +852 2504 8145
+          </p>
+        </div>
+      </div>
+    </footer>
+</body>
