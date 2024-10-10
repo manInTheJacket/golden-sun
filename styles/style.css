@@ -187,13 +187,16 @@ header > nav > div > a > h1 {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: red;
+  background-color: white;
   border-radius: 50%;
 
   width: 20px; /* Set a fixed width */
   height: 20px; /* Set the height equal to the width */
   line-height: 20px; /* Center the number vertically */
   text-align: center; /* Center the number horizontally */
-  color: white; /* Optional: set text color */
+  color: black; /* Optional: set text color */
   font-size: 14px; /* Adjust font size to fit inside the circle */
+}
+.hidden {
+  display: none;
 }

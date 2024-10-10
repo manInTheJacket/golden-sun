@@ -105,8 +105,9 @@
               </li>
               <li class="nav-item-rel">
                 <a class="nav-link" href="basket.html">Basket</a>
-                <p class="score-number">4</p>
+                <p class="score-number" id="score-number">0</p>
               </li>
+              <script src="./js/showTotalQuantity.js" ></script>
             </ul>
           </div>
         </div>
@@ -168,7 +169,8 @@
           </div>
           <div class="product-name">White Wakizashi</div>
           <div class="product-price">$289.00</div>
-          <button type="button" class="btn btn-success mb-4">Add 1</button>
+          <button type="button" class="btn btn-success mb-4"
+          onclick="addToBasket(`White Wakizashi`,289.00,'./images/White wakizashi.png')">Add 1</button>
         </div>
 
         <div class="product-card">
@@ -186,7 +188,8 @@
           </div>
           <div class="product-name">Wolf Wakizashi</div>
           <div class="product-price">$399.00</div>
-          <button type="button" class="btn btn-success mb-4">Add 1</button>
+          <button type="button" class="btn btn-success mb-4"
+          onclick="addToBasket(`Wolf Wakizashi`,399.00,'./images/Wolf wakizashi.png')">Add 1</button>
         </div>
 
         <div class="product-card">
@@ -204,7 +207,8 @@
           </div>
           <div class="product-name">Black Wakizashi</div>
           <div class="product-price">$389.00</div>
-          <button type="button" class="btn btn-success mb-4">Add 1</button>
+          <button type="button" class="btn btn-success mb-4"
+          onclick="addToBasket(`Black Wakizashi`,389.00,'./images/Black wakizashi.png')">Add 1</button>
         </div>
 
         <div class="product-card">
@@ -222,10 +226,12 @@
           </div>
           <div class="product-name">Tactical Wakizashi</div>
           <div class="product-price">$320.00</div>
-          <button type="button" class="btn btn-success mb-4">Add 1</button>
+          <button type="button" class="btn btn-success mb-4"
+          onclick="addToBasket(`Tactical Wakizashi`,320.00,'./images/Tactical wakizashi.png')">Add 1</button>
         </div>
       </div>
     </main>
+    <script src="./js/calculation.js"></script>
     <footer
       class="bg-white w-100 d-flex justify-content-center"
       style="color: black"
