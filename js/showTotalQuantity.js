@@ -14,6 +14,14 @@ function getTotalQuantity() {
     } else {
         scoreNumberElement.classList.add('hidden'); // Hide the element
     }
+
+    let totalAmount = 0;
+    
+    for (let i = 0; i < basket.length; i++) {
+        totalAmount += basket[i].price * basket[i].quantity; // Price * Quantity
+    }
+
+    document.getElementById('totalPrice').innerHTML = "Total Price: $" + totalAmount.toFixed(2);
 }
 
 // Call the function to update the display
