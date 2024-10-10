@@ -70,3 +70,14 @@ main {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+.li-elem-basket {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(23, 23, 23);
+  padding: 16px;
+  border-radius: 8px;
+  justify-content: space-between;
+  transition: transform 0.3s ease;
+
+  width: 1000px;
+}
