@@ -14,6 +14,10 @@ function getTotalQuantity() {
     } else {
         scoreNumberElement.classList.add('hidden'); // Hide the element
     }
+}
+
+function getTotalPrice() {
+    let basket = JSON.parse(localStorage.getItem('basket')) || [];
 
     let totalAmount = 0;
     

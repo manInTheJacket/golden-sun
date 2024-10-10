@@ -48,6 +48,7 @@ function updateQuantity(index, change) {
     // Re-render the basket
     renderBasket();
     getTotalQuantity();
+    getTotalPrice();
 }
 
 // Initial render when the page loads
