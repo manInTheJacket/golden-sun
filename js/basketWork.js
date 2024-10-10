@@ -48,6 +48,22 @@ function updateQuantity(index, change) {
     // Re-render the basket
     renderBasket();
     getTotalQuantity();
+    if(change === -1){
+      displayToastNotification(
+        "Successfuly deleted!", 
+        "fa fa-check", 
+        "#27ae60", 
+        "slide-in-slide-out"
+      );
+    }else{
+      displayToastNotification(
+        "Successfuly added!", 
+        "fa fa-check", 
+        "#27ae60", 
+        "slide-in-slide-out"
+    );
+    }
+   
 }
 
 // Initial render when the page loads
