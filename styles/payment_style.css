@@ -317,20 +317,21 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .payment-form-submit-button > i {
   margin-right: 8px;
 }
-#loadingSpinner {
-  display: none;
-  font-size: 20px;
-  margin-top: 10px;
-  text-align: center;
+/* Disabled button */
+.payment-form-submit-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
-/* Hide button when processing */
-.hidden {
+/* Spinner icon inside the button */
+.payment-form-submit-button .spinner {
   display: none;
+  margin-left: 10px;
+  font-size: 18px;
 }
 
-/* Payment form custom styles */
-.payment-form-submit-button {
-  position: relative;
+.payment-form-submit-button.processing .spinner {
+  display: inline-block;
 }
+
 /* end: Payment */

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Golden Sun School</title>
-<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Golden Sun School</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/payment_completed.css" />
 </head>
 
@@ -17,23 +16,39 @@
       
           <div class="paper">
             <div class="main-contents">
-              <div class="success-icon">&#10004;</div>
-              <div class="success-title">
-                Payment Complete
-              </div>
+              <div class="success-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z" fill="#FFFFFF"></path></svg></div>
+              <div class="success-title">Payment Complete</div>
               <div class="success-description">
-                Your payment for $N in USDT has been recieved and send to SHOPNAME.
+                Your payment for $119.2 has been sent successfully.
               </div>
               <div class="order-details">
-                <div class="order-number-label">Payment id</div>
+                <div class="order-number-label">Payment ID</div>
                 <div class="order-number">JPZZ1V-WQRR94-78E1VE</div>
               </div>
               <div class="order-footer">You can close this page!</div>
+              <div class="redirect-message" id="redirectMessage">
+                You will be redirected to the main page in <span class="countdown" id="countdown">5</span> seconds.
+              </div>
             </div>
             <div class="jagged-edge"></div>
           </div>
         </div>
-      </div>
-</body>
+    </div>
 
+    <script>
+        let countdown = 5;
+        const countdownElement = document.getElementById('countdown');
+        const redirectMessage = document.getElementById('redirectMessage');
+
+        const timer = setInterval(function() {
+            countdown--;
+            countdownElement.textContent = countdown;
+
+            if (countdown <= 0) {
+                clearInterval(timer);
+                window.location.href = 'index.html'; 
+            }
+        }, 1000);
+    </script>
+</body>
 </html>

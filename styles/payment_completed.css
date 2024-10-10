@@ -1,5 +1,5 @@
 body {
-    background: #999;
+    background: #070707;
   }
   
   .container {
@@ -122,6 +122,16 @@ body {
     font-weight: bold;
     color: #999;
   }
+.redirect-message {
+    margin-top: 30px;
+    font-size: 18px;
+    color:#999;
+}
+
+.countdown {
+    font-weight: bold;
+    color: #000000;
+}
   @keyframes print {
     0% {
       transform: translateY(-90%);

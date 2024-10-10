@@ -141,16 +141,18 @@
                   >
                 </div>
               </div>
-              <button type="submit" class="payment-form-submit-button">
+
+              <button type="button" class="payment-form-submit-button" id="payButton" onclick="startPaymentProcess()">
                 <i class="ri-wallet-line"></i> Pay
+                <span class="spinner">
+                  <i class="ri-loader-4-line ri-spin"></i>
+                </span>
               </button>
-              <div id="loadingSpinner"></div>
-                <i class="ri-loader-4-line ri-spin"></i> Processing...
-              </div>
             </form>
           </div>
         </div>
       </div>
     </section>
+    <script type="text/javascript" src="./js/payment.js"></script>
   </body>
 </html>
