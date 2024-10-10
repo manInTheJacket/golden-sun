@@ -23,9 +23,10 @@ function addToBasket(title, price, imageURL) {
 
     // Save the updated basket back to localStorage
     localStorage.setItem('basket', JSON.stringify(basket));
-
     // Provide feedback to the user
-    alert(`${item.title} has been added to your basket, quantity ${existingItemIndex === -1 ? 1 : basket[existingItemIndex].quantity}`);
-
+    displayToastNotification(`Item added to your cart, quantity ${existingItemIndex === -1 ? 1 : basket[existingItemIndex].quantity}`,  
+      "fa fa-check", 
+      "#27ae60", 
+      "slide-in-slide-out");
     getTotalQuantity();
 }
