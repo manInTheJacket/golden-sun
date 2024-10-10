@@ -317,4 +317,20 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .payment-form-submit-button > i {
   margin-right: 8px;
 }
+#loadingSpinner {
+  display: none;
+  font-size: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Hide button when processing */
+.hidden {
+  display: none;
+}
+
+/* Payment form custom styles */
+.payment-form-submit-button {
+  position: relative;
+}
 /* end: Payment */
