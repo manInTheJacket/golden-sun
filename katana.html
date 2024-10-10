@@ -106,8 +106,9 @@
               </li>
               <li class="nav-item-rel">
                 <a class="nav-link" href="basket.html">Basket</a>
-                <p class="score-number">4</p>
+                <p class="score-number" id="score-number">0</p>
               </li>
+              <script src="./js/showTotalQuantity.js" ></script>
             </ul>
           </div>
         </div>
@@ -193,7 +194,8 @@
               alt="Red and white"
             />
             <div class="carousel-caption d-none d-md-block z-3">
-              <button type="button" class="btn btn-success">Add 1</button>
+              <button type="button" class="btn btn-success"
+              onclick="addToBasket(`Red and White Katana`,249.00,'./images/Red and white.png')">Add 1</button>
               <h5 class="z-2">Red and White Katana</h5>
               <p class="z-2">$249.00</p>
             </div>
@@ -205,7 +207,8 @@
               alt="Blood groove katana"
             />
             <div class="carousel-caption d-none d-md-block z-3">
-              <button type="button" class="btn btn-success">Add 1</button>
+              <button type="button" class="btn btn-success"
+              onclick="addToBasket(`Blood groove Katana`,359.00,'./images/Blood groove katana.png')">Add 1</button>
               <h5 class="z-2">Blood groove Katana</h5>
               <p class="z-2">$359.00</p>
             </div>
@@ -217,7 +220,8 @@
               alt="Flame katana"
             />
             <div class="carousel-caption d-none d-md-block z-3">
-              <button type="button" class="btn btn-success">Add 1</button>
+              <button type="button" class="btn btn-success"
+              onclick="addToBasket(`Flame Katana`,299.00,'./images/Flame.png')">Add 1</button>
               <h5 class="z-2">Flame Katana</h5>
               <p class="z-2">$299.00</p>
             </div>
@@ -229,7 +233,8 @@
               alt="Katana Rayskin katana"
             />
             <div class="carousel-caption d-none d-md-block z-3">
-              <button type="button" class="btn btn-success">Add 1</button>
+              <button type="button" class="btn btn-success"
+              onclick="addToBasket(`Katana Rayskin`,1499.00,'./images/Katana Rayskin.png')">Add 1</button>
               <h5 class="z-2">Katana Rayskin</h5>
               <p class="z-2">$1,499.00</p>
             </div>
@@ -255,6 +260,7 @@
         </button>
       </div>
     </main>
+    <script src="./js/calculation.js"></script>
     <footer
       class="bg-white w-100 d-flex justify-content-center"
       style="color: black"

@@ -28,6 +28,13 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/shop-books.css" />
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </head>
 <body>
   <header>
@@ -106,7 +113,7 @@
             </li>
             <li class="nav-item-rel">
               <a class="nav-link" href="basket.html">Basket</a>
-              <p class="score-number">4</p>
+              <p class="score-number" id="score-number">0</p>
             </li>
           </ul>
         </div>
@@ -125,91 +132,19 @@
       <p>Here's your added goods</p>
     </div>
     <section class="book_section">
+      <h1 id="totalPrice">Total Price: 0$</h1>
       <ul style="display: flex; flex-direction: column; row-gap: 25px">
-        <li class="li_elem_list">
-          <div>
-            <h2>"The Book of Five Rings" by Miyamoto Musashi</h2>
-            <p>Price: 39.99$</p>
-            <p>Amount: 3</p>
-            <p>Total cost: 119.97$</p>
-            <button type="button" class="btn btn-success">Add 1</button>
-            <button type="button" class="btn btn-success">Remove 1</button>
-          </div>
-          <img
-            src="https://m.media-amazon.com/images/I/51xW6kC6tFL._AC_UF1000,1000_QL80_.jpg"
-            width="150"
-            height="200"
-          />
-        </li>
-
-        <li class="li_elem_list">
-          <div>
-            <h2>"Hagakure: The Book of the Samurai" by Yamamoto Tsunetomo</h2>
-            <p>Price: 41.99$</p>
-            <p>Amount: 3</p>
-            <p>Total cost: 125.97$</p>
-            <button type="button" class="btn btn-success">Add 1</button>
-            <button type="button" class="btn btn-success">Remove 1</button>
-          </div>
-          <img
-            src="https://m.media-amazon.com/images/I/51-p+kOBduL._AC_UF1000,1000_QL80_.jpg"
-            width="150"
-            height="200"
-          />
-        </li>
-
-        <li class="li_elem_list">
-          <div>
-            <h2>"The Sword of No-Sword" by John Stevens</h2>
-            <p>Price: 37.99$</p>
-            <p>Amount: 2</p>
-            <p>Total price: 75.98$</p>
-            <button type="button" class="btn btn-success">Add 1</button>
-            <button type="button" class="btn btn-success">Remove 1</button>
-          </div>
-          <img
-            src="https://m.media-amazon.com/images/I/91URtcjMwEL._AC_UF1000,1000_QL80_.jpg"
-            width="150"
-            height="200"
-          />
-        </li>
-
-        <li class="li_elem_list">
-          <div>
-            <h2>"The Unfettered Mind" by Takuan Soho</h2>
-            <p>Price: 35.99$</p>
-            <p>Amount: 2</p>
-            <p>Total price: 71.98$</p>
-            <button type="button" class="btn btn-success">Add 1</button>
-            <button type="button" class="btn btn-success">Remove 1</button>
-          </div>
-          <img
-            src="https://m.media-amazon.com/images/I/51EehA1A32L._AC_UF1000,1000_QL80_.jpg"
-            width="150"
-            height="200"
-          />
-        </li>
-
-        <li class="li_elem_list">
-          <div>
-            <h2>
-              "Japanese Swordsmanship: Technique and Practice" by Gordon
-              Warner & Donn F. Draeger
-            </h2>
-            <p>Price: 29.99$</p>
-            <p>Amount: 1</p>
-            <p>Total Price: 29.99$</p>
-            <button type="button" class="btn btn-success">Add 1</button>
-            <button type="button" class="btn btn-success">Remove 1</button>
-          </div>
-          <img
-            src="https://m.media-amazon.com/images/I/61fUYKmByEL._AC_UF1000,1000_QL80_.jpg"
-            width="150"
-            height="200"
-          />
-        </li>
+        <script src="./js/basketWork.js" ></script>
       </ul>
     </section>
+    <div style="display: flex; justify-content: center;">
+      <button class="btn btn-success" style="width: 200px; padding: 0;">
+        <a href="./payment.html" style="text-decoration: none; color: white; display: block; padding: 6px 12px;">
+          Buy
+        </a>
+      </button>
+    </div>
+    <script src="./js/showTotalQuantity.js" ></script>
   </main>
   <footer
       class="bg-white w-100 d-flex justify-content-center"
