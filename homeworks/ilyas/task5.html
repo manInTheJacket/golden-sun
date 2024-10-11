@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        let length = prompt("Enter the initial length:");
+        let width = prompt("Enter the initial width:");
+        
+        function calculateArea(len, wid) {
+            return len * wid;
+        }
+
+        console.log(`Initial Area: ${calculateArea(length, width)}`);
+
+        const updateChoice = prompt("Do you want to update the length or width? (type 'length' or 'width')");
+
+        if (updateChoice === 'length') {
+            length = prompt("Enter the new length:");
+        } else if (updateChoice === 'width') {
+            width = prompt("Enter the new width:");
+        }
+
+        console.log(`New Area: ${calculateArea(length, width)}`);
+    </script>
+</body>
+</html>
