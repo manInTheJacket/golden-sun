@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rectangle Area</title>
+</head>
+<body>
+    <script>
+        let length = prompt("Enter the length of the rectangle:");
+        let width = prompt("Enter the width of the rectangle:");
+        let area = length * width;
+        console.log(`The area of the rectangle is: ${area}`);
+        const updateDimension = prompt("Do you want to update the length or width? (length/width)").toLowerCase();
+        if (updateDimension === "length") {
+            length = prompt("Enter the new length:");
+        } else if (updateDimension === "width") {
+            width = prompt("Enter the new width:");
+        }
+        area = length * width;
+        console.log(`The new area of the rectangle is: ${area}`);
+    </script>
+</body>
+</html>
