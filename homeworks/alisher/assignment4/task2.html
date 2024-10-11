@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Eligibility</title>
+</head>
+<body>
+    <script>
+        const age = prompt("Enter your age:");
+        const hasLicense = prompt("Do you have a driver's license? (yes/no)").toLowerCase();
+        const isEligible = age >= 18 && hasLicense === 'yes';
+        console.log(`Eligible to drive: ${isEligible ? 'yes' : 'no'}`);
+    </script>
+</body>
+</html>

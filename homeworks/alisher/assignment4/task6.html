@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors Array</title>
+</head>
+<body>
+    <script>
+        const numColors = prompt("How many colors do you want to input?");
+        const colors = [];
+        for (let i = 0; i < numColors; i++) {
+            const color = prompt(`Enter color ${i + 1}:`);
+            colors.push(color);
+        }
+        console.log(`First Color: ${colors[0]}`);
+        console.log(`Last Color: ${colors[colors.length - 1]}`);
+    </script>
+</body>
+</html>

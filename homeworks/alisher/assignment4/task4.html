@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Check</title>
+</head>
+<body>
+    <script>
+        const numInput = prompt("Enter a number:");
+        const stringInput = prompt("Enter a string:");
+        const boolInput = prompt("Enter a boolean (true/false):");
+        console.log(`Number Input: ${numInput} is of type ${typeof Number(numInput)}`);
+        console.log(`String Input: "${stringInput}" is of type ${typeof stringInput}`);
+        console.log(`Boolean Input: ${boolInput} is of type ${typeof (boolInput === 'true')}`);
+    </script>
+</body>
+</html>

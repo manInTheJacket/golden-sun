@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Array</title>
+</head>
+<body>
+    <script>
+        const fruits = [];
+        const fruitCount = prompt("How many fruits would you like to input?");
+        for (let i = 0; i < fruitCount; i++) {
+            const fruit = prompt(`Enter fruit ${i + 1}:`);
+            fruits.push(fruit);
+        }
+        fruits.pop(); // Remove last fruit
+        const newFruit = prompt("Enter a new fruit to add at the beginning:");
+        fruits.unshift(newFruit); // Add new fruit at the beginning
+        console.log(`Updated Fruit List: ${JSON.stringify(fruits)}`);
+    </script>
+</body>
+</html>
