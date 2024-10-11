@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <script>
+        const fruitList = [];
+        const totalFruits = prompt("How many fruits would you like to input?");
+        
+        for (let index = 0; index < totalFruits; index++) {
+            const enteredFruit = prompt(`Please enter fruit number ${index + 1}:`);
+            fruitList.push(enteredFruit);
+        }
+        
+        fruitList.pop();  
+        const additionalFruit = prompt("Enter a new fruit to insert at the start:");
+        fruitList.unshift(additionalFruit);  
+        
+        console.log(`Updated fruits: ${fruitList}`);
+        
+    </script>
+</body>
+</html>

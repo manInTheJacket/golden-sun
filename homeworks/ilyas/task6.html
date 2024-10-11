@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Input</title>
+</head>
+<body>
+    <script>
+        const colorCount = prompt("How many colors?");
+        const colors = [];
+
+        let i = 0;
+        while(i < colorCount){
+            const color = prompt(`Enter color ${i+1}`);
+            colors.push(color);
+            i++;
+        }
+
+        console.log(`First Color: ${colors[0]}`);
+        console.log(`Last Color: ${colors[colors.length - 1]}`);
+    </script>
+</body>
+</html>
