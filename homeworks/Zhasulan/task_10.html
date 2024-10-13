@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const firstNumber = prompt("Please enter the first number")
+        const secondNumber = prompt("Please enter the second number")
+        const operation = prompt("Please enter the operation")
+        console.log("🚀 ~ firstNumberValidation:", typeof firstNumber)
+
+        let firstNumberValidation = true
+        if (isNaN(firstNumber)) {
+            firstNumberValidation = false
+        }
+        let secondNumberValidation = true
+        if (isNaN(secondNumber)) {
+            secondNumberValidation = false
+        }
+        let operationResult
+        if (!firstNumberValidation | !secondNumberValidation) {
+            operationResult = "Invalid numbers"
+        } else if (operation === "*") {
+            operationResult = firstNumber * secondNumber
+        } else if (operation === "/") {
+            if (secondNumber === "0") {
+                operationResult = "You cannot divide by zero"
+            } else {
+                operationResult = firstNumber / secondNumber
+            }
+        } else if (operation === "+") {
+            operationResult = firstNumber + secondNumber
+        } else if (operation === "-") {
+            operationResult = firstNumber - secondNumber
+        } else {
+            operationResult = "Invalid operation"
+        }
+        
+        const result = {
+            "First number": firstNumberValidation ? firstNumber : "First number is not a valid number",
+            "Second number": secondNumberValidation ? secondNumber: "Second number is not a valid number",
+            "Result": operationResult
+        }
+        console.log(result)
+    </script>
+</body>
+</html>

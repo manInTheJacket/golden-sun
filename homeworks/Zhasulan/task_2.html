@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+</head>
+<body>
+    <script>
+        const age = prompt("Please enter your age");
+        const driverLicense = prompt("Do you have a driver's license? 'yes' or 'no'")
+        let license = 'no'
+        if (driverLicense.toLowerCase() === "yes" && +age >= 18) {
+            license = "yes"
+        }
+        console.log("age", age);
+        console.log("driver's license", license);
+
+    </script>
+</body>
+</html>
