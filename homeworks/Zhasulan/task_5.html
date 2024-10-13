@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="lenght" style="margin: 50px auto;">Update lenght</button>
+    <button id="width" style="margin: 50px auto;">Update width</button>
+    <script>
+        const lengthValue = prompt("Please enter a lenght of rectangle")
+        const widthValue = prompt("Please enter a width of rectangle")
+        console.log("Initial lenght",lengthValue)
+        console.log("Initial width", widthValue)
+        console.log("Area", +lengthValue * +widthValue)
+        const updateLenght = document.getElementById("lenght")
+        const updateWidth = document.getElementById("width")
+        updateLenght.addEventListener("click", function() {
+            const newLengthValue = prompt("Enter new lenght")
+            console.log("Initial width", widthValue)
+            console.log("New lenght", newLengthValue)
+            console.log("New area", +newLengthValue * +widthValue)
+        })
+        updateWidth.addEventListener("click", function() {
+            const newWidthValue = prompt("Enter new width")
+            console.log("Initial lenght", lengthValue)
+            console.log("New width", newWidthValue)
+            console.log("New area", +lengthValue * +newWidthValue)
+        })
+        </script>
+</body>
+</html>
