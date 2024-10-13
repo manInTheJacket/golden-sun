@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4</title>
+</head>
+<body>
+    <script>
+        const numberValue = prompt("Please enter number");
+        const stringvalue = prompt("Please enter string");
+        const booleanValue = prompt("Please enter boolean value (true or false)");
+        let numberType
+        if (!isNaN(numberValue)) {
+            numberType = "number";
+        } else {
+            numberType = "not a number";
+        }
+        let booleanType
+        if (booleanValue.toLowerCase() === 'true' || booleanValue.toLowerCase() === 'false') {
+            booleanType = "boolean";
+        } else {
+            booleanType = "not boolean";
+        }
+        console.log("Number input:", numberValue, "- typeof value =", numberType);
+        console.log("String input:", stringvalue, "- typeof value =", typeof stringvalue);
+        console.log("Boolean input:", booleanValue, "- typeof value =", booleanType);
+    </script>
+</body>
+</html>
