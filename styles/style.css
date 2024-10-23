@@ -243,3 +243,25 @@ header > nav > div > a > h1 {
 .music-toggle:hover {
   opacity: 1;
 }
+
+.mw-400 {
+  max-width: 400px;
+}
+
+.p-right{
+  padding-right: 0.5rem;
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.p-left {
+  padding-right: 0;
+  padding-left: 0.5rem;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.input-error {
+  color: red;
+  display: none;
+}
