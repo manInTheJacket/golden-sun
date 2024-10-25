@@ -9,7 +9,7 @@ const adminContent = `
         <h1 class="books_shop">Admin Panel</h1>
         <p>Here you can control over your website</p>
       </div>
-      <section class="book_section" style="align-items:center;">
+      <section class="book_section">
         <div class="admin">
           <div class="admin_item">
             <button type="button" class="btn btn-danger">Delete User</button>
