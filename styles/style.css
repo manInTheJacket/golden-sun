@@ -243,3 +243,28 @@ header > nav > div > a > h1 {
 .music-toggle:hover {
   opacity: 1;
 }
+
+.admin {
+  display: flex; 
+  flex-wrap: wrap; 
+  width: 218px;
+  margin: 0 auto;
+}
+.admin_item {
+  flex: 1 1 50%; /* Each item takes up half the width */
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+/* Align specific items */
+.admin_item:nth-child(1),
+.admin_item:nth-child(3) {
+  display: flex;
+  justify-content: flex-end; /* Aligns to the right */
+}
+
+.admin_item:nth-child(2),
+.admin_item:nth-child(4) {
+  display: flex;
+  justify-content: flex-start; /* Aligns to the left */
+}
