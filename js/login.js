@@ -54,6 +54,11 @@ loginSubmit.addEventListener('click', function(event) {
     const user = users.find(user => user.email === email.value)
 
     if(user) {
+        if(user.password === password.value && user.email === "admin@gmail.com") {
+            alert("Login successful as Administrator!")
+            localStorage.setItem('current_user', JSON.stringify(user))
+            return window.location.href = 'admin_panel.html'
+        }
         if(user.password === password.value) {
             alert('Login successful');
             localStorage.setItem('current_user', JSON.stringify(user))

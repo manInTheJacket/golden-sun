@@ -80,6 +80,8 @@ const htmlContent = `
         <li class="nav-item" id="current_user">
           <a class="nav-link" href="login.html">Log in</a>
         </li>
+        <li class="nav-item" id="admin_panel">
+        </li>
         <script src="./js/showTotalQuantity.js" ></script>
       </ul>
     </div>
@@ -99,4 +101,9 @@ if (current_user) {
     localStorage.removeItem('current_user')
     alert('You have logged out successfully.')
   })
+}
+
+if (current_user.email === "admin@gmail.com") {
+  const userLink = document.querySelector('#admin_panel')
+  userLink.innerHTML = `<a class="nav-link" href="./admin_panel.html">Admin Panel</a>`
 }
