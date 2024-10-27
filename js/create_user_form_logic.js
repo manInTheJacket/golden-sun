@@ -13,12 +13,51 @@ const contactFormPasswordError = document.getElementById('contact_form_password_
 
 contactSubmit.addEventListener('click', function(event) {
     event.preventDefault();
-    if (validatePhoneNumber() && validateName() && validateEmail() && validateLastName() && validatePassword()) {
 
-    }
+    if (validatePhoneNumber() && validateName() && validateEmail() && validateLastName() && validatePassword()) {
         
-    return alert('Form submitted successfully');
+        const newUser = {
+            name: contactFormName.value,
+            lastName: contactFormLastName.value,
+            email: contactFormEmail.value,
+            tel: contactFormTel.value,
+            password: contactFormPassword.value,
+            firstLogIn: new Date().toISOString().split('T')[0],
+            lastLogIn: new Date().toISOString().split('T')[0]
+        };
+
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        const userExists = users.some(user => user.email === newUser.email);
+        if (!userExists) {
+            users.push(newUser);
+            localStorage.setItem('users', JSON.stringify(users));
+
+            contactFormName.value = '';
+            contactFormLastName.value = '';
+            contactFormEmail.value = '';
+            contactFormTel.value = '';
+            contactFormPassword.value = '';
+            
+            displayToastNotification(
+                "User added successfully!", 
+                "fa fa-check", 
+                "#27ae60", 
+                "slide-in-slide-out"
+              );
+            
+            displayUsersList();
+        } else {
+            displayToastNotification(
+                "Email already exists", 
+                "fa fa-exclamation-triangle", 
+                "#f39c12", 
+                "slide-in-fade-out"
+            );
+        }
+    }
 });
+
 
 function validateName() {
     const inputValue = contactFormName.value;
