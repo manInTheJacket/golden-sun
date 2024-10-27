@@ -10,10 +10,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-.input-error {
-  color: red;
-  display: none;
-}
 .btn-disabled {
   opacity: 0.2;
 }
