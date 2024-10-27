@@ -7,16 +7,16 @@ const contactFormEmail = document.getElementById('contact_form_email');
 const contactFormEmailError = document.getElementById('contact_form_email_error');
 
 contactSubmit.addEventListener('click', function(event) {
-    event.preventDefault();
+    event.preventDefault()
     if (validateName() && validatePhoneNumber() && validateEmail()) {
 
     }
         
     return alert('Form submitted successfully');
-});
+})
 
 function validateName() {
-    const inputValue = contactFormName.value;
+    const inputValue = contactFormName.value
     if (inputValue === '') {
         showError(contactFormName, contactFormNameError, 'Please enter your name');
         return false
@@ -27,7 +27,7 @@ function validateName() {
 }
 
 function validatePhoneNumber() {
-    const inputValue = contactFormTel.value;
+    const inputValue = contactFormTel.value
     if (inputValue === '') { 
         showError(contactFormTel, contactFormTelError, 'Please enter a phone number');
         return false
@@ -44,8 +44,8 @@ function validatePhoneNumber() {
 }
 
 function validateEmail() {
-    const inputValue = contactFormEmail.value;
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    const inputValue = contactFormEmail.value
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
 
     if (inputValue === '') {
         showError(contactFormEmail, contactFormEmailError, 'Please enter an email address');
@@ -60,45 +60,45 @@ function validateEmail() {
 }
 
 function showError(inputElement, errorElement, errorMessage) {
-    errorElement.style.display = 'block';
-    inputElement.style.borderColor = 'red';
-    errorElement.textContent = errorMessage;
+    errorElement.style.display = 'block'
+    inputElement.style.borderColor = 'red'
+    errorElement.textContent = errorMessage
 }
 
 function hideError(inputElement, errorElement) {
-    errorElement.style.display = 'none';
-    inputElement.style.borderColor = 'transparent';
+    errorElement.style.display = 'none'
+    inputElement.style.borderColor = 'transparent'
 }
 
 contactFormTel.addEventListener('input', function(event) {
-    validatePhoneNumber();
+    validatePhoneNumber()
     if (validatePhoneNumber() && validateName() && validateEmail()) {
-        contactSubmit.disabled = false;
+        contactSubmit.disabled = false
         contactSubmit.style.opacity = "1"
     } else {
-        contactSubmit.disabled = true;
+        contactSubmit.disabled = true
         contactSubmit.style.opacity = "0.5"
     }
-});
+})
 
 contactFormEmail.addEventListener('input', function(event) {
-    validateEmail();
+    validateEmail()
     if (validatePhoneNumber() && validateName() && validateEmail()) {
-        contactSubmit.disabled = false;
+        contactSubmit.disabled = false
         contactSubmit.style.opacity = "1"
     } else {
-        contactSubmit.disabled = true;
+        contactSubmit.disabled = true
         contactSubmit.style.opacity = "0.5"
     }
-});
+})
 
 contactFormName.addEventListener('input', function(event) {
-    validateName();
+    validateName()
     if (validatePhoneNumber() && validateName() && validateEmail()) {
-        contactSubmit.disabled = false;
+        contactSubmit.disabled = false
         contactSubmit.style.opacity = "1"
     } else {
-        contactSubmit.disabled = true;
+        contactSubmit.disabled = true
         contactSubmit.style.opacity = "0.5"
     }
-});
+})
