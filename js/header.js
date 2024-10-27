@@ -1,6 +1,5 @@
 const htmlContent = `
 <!-- Header and Navigation by Kenday I. -->
-<header>
 <nav class="navbar w-100 d-flex navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="index.html">
@@ -78,12 +77,26 @@ const htmlContent = `
           <a class="nav-link" href="basket.html">Basket</a>
           <p class="score-number" id="score-number">0</p>
         </li>
+        <li class="nav-item" id="current_user">
+          <a class="nav-link" href="login.html">Log in</a>
+        </li>
         <script src="./js/showTotalQuantity.js" ></script>
       </ul>
     </div>
   </div>
 </nav>
-</header>
 `
-const header = document.getElementById('header');
-header.innerHTML = htmlContent;
+
+const header = document.getElementById('header')
+header.innerHTML = htmlContent
+
+const current_user = JSON.parse(localStorage.getItem('current_user'))
+
+if (current_user) {
+  const userLink = document.querySelector('#current_user')
+  userLink.innerHTML = `<a class="nav-link" href="">Log out</a>`
+  userLink.addEventListener('click', () => {
+    localStorage.removeItem('current_user')
+    alert('You have logged out successfully.')
+  })
+}
