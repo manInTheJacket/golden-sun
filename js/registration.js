@@ -55,6 +55,18 @@ const content = `
                             <small class="input-error" id="reg_email_error"></small>
                         </p>
                     </div>
+                    <div class="col-10 mt-0 p-0">
+                        <input 
+                            type="text" 
+                            class="form-control"
+                            placeholder="telephone"
+                            name="tel"
+                            id="reg_tel"
+                        />
+                        <p>
+                            <small class="input-error" id="reg_tel_error"></small>
+                        </p>
+                    </div>
                     <div class="col-10 p-0">
                         <input 
                             type="password" 
@@ -102,6 +114,9 @@ const lastname_error = document.getElementById('reg_lastname_error')
 const email = document.getElementById('reg_email')
 const email_error = document.getElementById('reg_email_error')
 
+const tel = document.getElementById('reg_tel')
+const tel_error = document.getElementById('reg_tel_error')
+
 const password = document.getElementById('reg_password')
 const password_error = document.getElementById('reg_password_error')
 
@@ -117,6 +132,7 @@ regSubmit.addEventListener('click', function(event) {
         name: reg_name.value,
         lastname: lastname.value,
         email: email.value,
+        tel: tel.value,
         password: password.value
     }
     
@@ -209,6 +225,21 @@ function validateEmail() {
     }
 }
 
+function validateTel() {
+    const inputValue = tel.value;
+
+    if (inputValue === '') {
+        showError(tel, tel_error, 'Please enter a phone number')
+        return false
+    } else if (inputValue.length !== 12 || inputValue[0] !== "+") {
+        showError(tel, tel_error, 'Please enter a valid phone number')
+        return false
+    } else {
+        hideError(tel, tel_error)
+        return true
+    }
+}
+
 function validatePassword() {
     const inputValue = password.value
     const passwordRegex = /^(?=.*[A-Z])[a-zA-Z0-9].{7,}$/
@@ -254,7 +285,7 @@ function hideError(inputElement, errorElement) {
 username.addEventListener('input', function(event) {
     validateUsername()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword()) {
+    validateEmail() && validateTel() && validatePassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
 
@@ -267,7 +298,7 @@ username.addEventListener('input', function(event) {
 reg_name.addEventListener('input', function(event) {
     validateName()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword()) {
+    validateEmail() && validateTel() && validatePassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
     } else {
@@ -279,7 +310,7 @@ reg_name.addEventListener('input', function(event) {
 lastname.addEventListener('input', function(event) {
     validateLastname()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword()) {
+    validateEmail() && validateTel() && validatePassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
     } else {
@@ -291,7 +322,19 @@ lastname.addEventListener('input', function(event) {
 email.addEventListener('input', function(event) {
     validateEmail()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword()) {
+    validateEmail() && validateTel() && validatePassword()) {
+        regSubmit.disabled = false
+        regSubmit.style.opacity = "1"
+    } else {
+        regSubmit.disabled = true
+        regSubmit.style.opacity = "0.5"
+    }
+})
+
+tel.addEventListener('input', function(event) {
+    validateTel()
+    if (validateUsername() && validateName() && validateLastname() && 
+    validateEmail() && validateTel() && validatePassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
     } else {
@@ -303,7 +346,7 @@ email.addEventListener('input', function(event) {
 password.addEventListener('input', function(event) {
     validatePassword()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword()) {
+    validateEmail()&& validateTel() && validatePassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
     } else {
@@ -315,7 +358,7 @@ password.addEventListener('input', function(event) {
 confirmPassword.addEventListener('input', function(event) {
     validateConfirmPassword()
     if (validateUsername() && validateName() && validateLastname() && 
-    validateEmail() && validatePassword() && validateConfirmPassword()) {
+    validateEmail() && validateTel() && validatePassword() && validateConfirmPassword()) {
         regSubmit.disabled = false
         regSubmit.style.opacity = "1"
     } else {

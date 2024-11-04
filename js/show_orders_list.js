@@ -1,18 +1,4 @@
-
-`
-orders[] {
-  name,
-  email,
-  tel,
-  orders[] {
-    name,
-    price,
-    amount
-  }
-}
-`
-
-const users = [
+const UsersItem = [
     {
         name: 'Qwerty',
         tel: '+88005553535',
@@ -23,16 +9,16 @@ const users = [
         ]
     },
     {
-        name: 'Asdf',
-        tel: '+88005553536',
+        name: 'Alex',
+        tel: '+88053768536',
         email: 'anotherEmail@gmail.com',
         orders: [
             { name: 'Item 3', price: 20, amount: 3 }
         ]
     },
     {
-        name: 'Zxcv',
-        tel: '+88005553537',
+        name: 'Zhambo',
+        tel: '+88002343537',
         email: 'differentEmail@gmail.com',
         orders: [
             { name: 'Item 4', price: 5, amount: 5 },
@@ -41,24 +27,45 @@ const users = [
     }
 ];
 
+function createOrdersTable(users) {
+    const table = document.createElement('table');
+    table.className = 'table table-bordered';
+    table.style = "color: white";
+    const thead = document.createElement('thead');
+    thead.className = 'thead-light';
+    thead.innerHTML = `
+        <tr>
+            <th >Name</th>
+            <th >Telephone</th>
+            <th >Email</th>
+            <th >Order Name</th>
+            <th >Price</th>
+            <th >Amount</th>
+            <th >Total Price</th>
+        </tr>
+    `;
+    table.appendChild(thead);
 
-const createOrdersList = (orders) => {
-    return orders.map(order => `
-        <div>
-            <h3>Name: ${order.name}, Tel: ${order.tel}, E-mail: ${order.email}</h3>
-            <ul style="display: flex; flex-direction: column; row-gap: 10px">
-                ${order.orders.map(orderParam => `
-                    <li>
-                        <h2>${orderParam.name}</h2>
-                        <p>Price: $${orderParam.price}</p>
-                        <p>Amount: ${orderParam.amount}</p>
-                        <p>Total Price: $${(orderParam.amount * orderParam.price).toFixed(2)}</p>
-                    </li>
-                `).join('')}
-            </ul>
-        </div>
-    `).join('');
-};
+    const tbody = document.createElement('tbody');
 
-const ordersBox = document.getElementById('orders_box');
-ordersBox.innerHTML = createOrdersList(users);
+    users.forEach(user => {
+        user.orders.forEach(order => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${user.name}</td>
+                <td>${user.tel}</td>
+                <td>${user.email}</td>
+                <td>${order.name}</td>
+                <td>$${order.price}</td>
+                <td>${order.amount}</td>
+                <td>$${(order.amount * order.price).toFixed(2)}</td>
+            `;
+            tbody.appendChild(row);
+        });
+    });
+
+    table.appendChild(tbody);
+
+    document.getElementById('orders_box').appendChild(table);
+}
+createOrdersTable(UsersItem)

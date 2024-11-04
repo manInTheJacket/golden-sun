@@ -15,7 +15,3 @@ const ShowOrdersContent = `
 const showOrders = document.getElementById('show_orders');
 showOrders.innerHTML = ShowOrdersContent;
 
-// Create and append the script tag
-const script = document.createElement('script');
-script.src = './js/show_orders_list.js';
-showOrders.appendChild(script);
