@@ -142,10 +142,22 @@ regSubmit.addEventListener('click', function(event) {
         users.push(newUser)
         localStorage.setItem('users', JSON.stringify(users))
 
-        alert('Registration completed successfully')
-        return window.location.href = 'login.html'
+        displayToastNotification(
+            "Registration completed successfully!", 
+            "fa fa-check", 
+            "#27ae60", 
+            "slide-in-slide-out"
+        );
+        setTimeout(function() {
+            window.location.href = 'login.html';
+        }, 1500);
     } else {
-        alert('Email address already exists. Please use a different one.')
+        displayToastNotification(
+            "Email already exists", 
+            "fa fa-exclamation-triangle", 
+            "#f39c12", 
+            "slide-in-fade-out"
+        );
     }
 })
 

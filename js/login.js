@@ -53,24 +53,48 @@ loginSubmit.addEventListener('click', function(event) {
     let users = JSON.parse(localStorage.getItem('users')) || []
     const user = users.find(user => user.email === email.value)
 
-    if(user) {
-        if(user.password === password.value && user.email === "admin@gmail.com") {
-            alert("Login successful as Administrator!")
-            localStorage.setItem('current_user', JSON.stringify(user))
-            return window.location.href = 'admin_panel.html'
-        }
-        if(user.password === password.value) {
-            alert('Login successful');
-            localStorage.setItem('current_user', JSON.stringify(user))
-            return window.location.href = 'index.html'
+    if (user) {
+        if (user.password === password.value) {
+            if (user.email === "admin@gmail.com") {
+                displayToastNotification(
+                    "Login successful as Administrator!", 
+                    "fa fa-check", 
+                    "#27ae60", 
+                    "slide-in-slide-out"
+                );
+                localStorage.setItem('current_user', JSON.stringify(user));
+                setTimeout(function() {
+                    window.location.href = 'admin_panel.html';
+                }, 1500);      
+            } else {
+                displayToastNotification(
+                    "Login successful", 
+                    "fa fa-check", 
+                    "#27ae60", 
+                    "slide-in-slide-out"
+                );           
+                localStorage.setItem('current_user', JSON.stringify(user));
+                setTimeout(function() {
+                    window.location.href = 'index.html';
+                }, 1500); 
+            }
         } else {
-            return alert('Incorrect password')
+            return displayToastNotification(
+                "Incorrect password", 
+                "fa fa-exclamation-triangle", 
+                "#f39c12", 
+                "slide-in-fade-out"
+            );
         }
     } else {
-        return alert('User not found')
+        return displayToastNotification(
+            "User Not Found", 
+            "fa fa-exclamation-triangle", 
+            "#f39c12", 
+            "slide-in-fade-out"
+        );
     }
-
-    return alert('Login successful');
+    
 })
 
 function validateEmail() {

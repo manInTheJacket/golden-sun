@@ -26,8 +26,23 @@
         <!-- External CSS -->
         <link rel="stylesheet" href="styles/style.css" />
         <link rel="stylesheet" href="styles/login-reg.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="styles/toast.css"/>
     </head>
     <body>
+        <div class="toasts"></div>
+            <div class="master-toast-notification hide-toast">
+                <div class="toast-content">
+                    <div class="toast-icon">
+                        <i class="fa-solid"></i>
+                    </div>
+                <div class="toast-msg"></div>
+            </div>
+                <div class="toast-progress">
+                    <div class="toast-progress-bar"></div>
+                </div>
+        </div>
+        <script type="text/javascript" src="./js/toast.js"></script>
         <main id="login_content"></main>
         <script src="./js/login.js"></script>
     </body>
