@@ -11,8 +11,8 @@ const DeleteFormContent = `
             <label>Selector:</label><br />
             <input checked type="radio" id="name" name="classType" value="name" required />
             <label for="kendo">name</label><br />
-            <input type="radio" id="lastName" name="classType" value="lastName" required />
-            <label for="iaido">lastName</label><br />
+            <input type="radio" id="lastname" name="classType" value="lastname" required />
+            <label for="iaido">lastname</label><br />
             <input type="radio" id="email" name="classType" value="email" required />
             <label for="iaido">email</label><br />
             <div class="mb-2">
@@ -87,7 +87,7 @@ const updatePlaceholder = (filterType) => {
     const inputField = document.getElementById('contact_form_name');
     if (filterType === 'name') {
         inputField.placeholder = 'Enter Name';
-    } else if (filterType === 'lastName') {
+    } else if (filterType === 'lastname') {
         inputField.placeholder = 'Enter Last Name';
     } else if (filterType === 'email') {
         inputField.placeholder = 'Enter Email';
@@ -105,7 +105,7 @@ const deleteUser = () => {
 
     saveUsersToLocalStorage(updatedUsers);
     displayToastNotification(
-      "User successfuly deleted!", 
+      "User successfully deleted!", 
       "fa fa-check", 
       "#27ae60", 
       "slide-in-slide-out"

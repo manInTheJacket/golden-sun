@@ -18,12 +18,10 @@ contactSubmit.addEventListener('click', function(event) {
         
         const newUser = {
             name: contactFormName.value,
-            lastName: contactFormLastName.value,
+            lastname: contactFormLastName.value,
             email: contactFormEmail.value,
             tel: contactFormTel.value,
             password: contactFormPassword.value,
-            firstLogIn: new Date().toISOString().split('T')[0],
-            lastLogIn: new Date().toISOString().split('T')[0]
         };
 
         let users = JSON.parse(localStorage.getItem('users')) || [];
