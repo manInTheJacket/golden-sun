@@ -16,18 +16,15 @@ const createUsersTable = (users) => {
             <th>Tel</th>
             <th>E-mail</th>
             <th>Password</th>
-            <th>First log-in</th>
-            <th>Last log-in</th>
         </tr>
     `;
     const tableRows = users.map(user => `
         <tr>
             <td>${user.name}</td>
             <td>${user.lastname}</td>
+            <td>${user.tel}</td>
             <td>${user.email}</td>
             <td>${user.password}</td>
-            <td>${user.firstLogIn}</td>
-            <td>${user.lastLogIn}</td>
         </tr>
     `).join('');
 
