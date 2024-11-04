@@ -1,5 +1,5 @@
 const htmlContent = `
-<!-- Header and Navigation by Kenday I. -->
+<!-- Header and Navigation by Kenbay I. -->
 <nav class="navbar w-100 d-flex navbar-expand-lg">
   <div class="container">
     <a class="navbar-brand" href="index.html">
