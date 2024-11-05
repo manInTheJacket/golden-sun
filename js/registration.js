@@ -83,7 +83,8 @@ const content = `
                 </form>
                 <div class="mt-3 p-0 text-center">Already have an account? <a href="login.html">Sign in</a></div>
             </div>
-        </section>`
+        </section>
+        `
 
 const registration = document.getElementById('registration_content')
 registration.innerHTML = content
