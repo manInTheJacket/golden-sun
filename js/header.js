@@ -82,12 +82,16 @@ const htmlContent = `
         </li>
         <li class="nav-item" id="admin_panel">
         </li>
-        <script src="./js/showTotalQuantity.js" ></script>
       </ul>
     </div>
   </div>
 </nav>
 `
+
+const script = document.createElement("script");
+script.src = "./js/showTotalQuantity.js";
+document.body.appendChild(script);
+
 
 const header = document.getElementById('header')
 header.innerHTML = htmlContent
