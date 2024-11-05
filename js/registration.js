@@ -1,8 +1,10 @@
 const content = `
         <section class="container vh-100 d-flex flex-column justify-content-center align-items-center">
             <div class="josefin fs-3 fw-bold">
-                黄金の太陽 <br />
-                GOLDEN SUN
+                <a href="index.html" style="text-decoration: none; color: white">
+                    黄金の太陽 <br />
+                    GOLDEN SUN
+                </a>
             </div>
             <h3 class="josefin">Registration</h3>
             <div class="mt-3 mw-400">
