@@ -16,12 +16,12 @@ const DeleteFormContent = `
             <input type="radio" id="email" name="classType" value="email" required />
             <label for="iaido">email</label><br />
             <div class="mb-2">
-                <label for="name" class="form-label">Enter your name: </label>
+                <label for="name" class="form-label">Enter the value: </label>
                 <input class="form-control w-100" placeholder="Enter Name" type="text" name="name" id="contact_form_name" />
                 <p><small class="input-error" id="contact_form_name_error"></small></p>
             </div>
             <div class="user-checkbox-container" style="margin: auto 0; margin-bottom: 20px; padding: 12px; border-radius: 6px; background-color: rgb(48, 48, 48);"></div>
-            <button type="submit" class="btn btn-primary" id="contact_submit">Submit</button>
+            <button type="submit" class="btn btn-primary" id="contact_submit">Delete</button>
         </form>
     </section>
 </main>
@@ -41,30 +41,60 @@ const saveUsersToLocalStorage = (users) => {
 // Display matching users in the checkbox list
 const displayUsersInCheckboxes = (users, filterType, searchValue) => {
     const userCheckboxContainer = document.querySelector('.user-checkbox-container');
-    userCheckboxContainer.innerHTML = ''; // Clear previous checkboxes
+    userCheckboxContainer.innerHTML = ''; // Clear previous content
 
     if (users.length === 0) {
         const message = document.createElement('p');
         message.innerText = `No users found with the given ${searchValue.length > 0 ? searchValue : 'criteria'}.`;
         userCheckboxContainer.appendChild(message);
     } else {
+        // Create table element
+        const table = document.createElement('table');
+        table.classList.add('user-table');
+        table.classList.add("table");
+        table.classList.add("table-bordered");
+        table.style.border= "white solid 1px";
+        table.style.color="white";
+        table.style.width = '100%';
+        table.style.borderCollapse = 'collapse';
+
+        // Create table header
+        const headerRow = document.createElement('tr');
+        headerRow.innerHTML = `
+            <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">Select</th>
+            <th style="padding: 8px; text-align: left; border: 1px solid #ddd;">${filterType.charAt(0).toUpperCase() + filterType.slice(1)}</th>
+        `;
+        table.appendChild(headerRow);
+
+        // Create a row for each user
         users.forEach(user => {
-            const userDiv = document.createElement('div');
-            userDiv.style = "display: flex; align-items: center; text-align: center; margin-bottom: 10px;";
-            
+            const row = document.createElement('tr');
+
+            // Checkbox cell
+            const checkboxCell = document.createElement('td');
+            checkboxCell.style.border = '1px solid #ddd';
+            checkboxCell.style.padding = '8px';
+
             const checkbox = document.createElement('input');
             checkbox.type = 'checkbox';
-            checkbox.name = user.name; // Ensure this is unique
+            checkbox.name = user.name;
             checkbox.value = user.name;
+            checkboxCell.appendChild(checkbox);
 
-            const userName = document.createElement('p');
-            userName.style.margin = 'auto 0';
-            userName.innerText = `${filterType === 'email' ? 'Email: ' : 'Name: '} ${user[filterType]}`;
+            // User info cell
+            const userInfoCell = document.createElement('td');
+            userInfoCell.style.padding = '8px';
+            userInfoCell.style.border = '1px solid #ddd';
+            userInfoCell.innerText = user[filterType];
 
-            userDiv.appendChild(checkbox);
-            userDiv.appendChild(userName);
-            userCheckboxContainer.appendChild(userDiv);
+            // Append cells to row
+            row.appendChild(checkboxCell);
+            row.appendChild(userInfoCell);
+            table.appendChild(row);
         });
+
+        // Append table to container
+        userCheckboxContainer.appendChild(table);
     }
 };
 
